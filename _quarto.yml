@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "Study Viability Report: Virtual Arthroplasty Clinic Implementation in a Public Hospital Department"
+  author: "Norah Jones"
+  date: "02/07/2025"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - SVR - Part 1 - Question Check.qmd
+    - SVR - Part 2 - Viability.qmd
+    - SVR - Part 3 - Study Plan.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
