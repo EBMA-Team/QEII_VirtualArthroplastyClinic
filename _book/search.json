@@ -34,7 +34,7 @@
     "href": "SVR - Part 1 - Question Check.html",
     "title": "3  Part 1 - Question Check",
     "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "text": "4 Executive Summary\nasdfasdf",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Part 1 - Question Check</span>"
     ]
@@ -67,6 +67,36 @@
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
       "References"
+    ]
+  },
+  {
+    "objectID": "SVR - Part 1 - Question Check.html#literature-review",
+    "href": "SVR - Part 1 - Question Check.html#literature-review",
+    "title": "3  Part 1 - Question Check",
+    "section": "6.1 Literature Review",
+    "text": "6.1 Literature Review\nSearch crossref for related articles\n\nReviewResults &lt;- rcrossref::cr_works(\n  query =\"virtual+arthoplasty+clinic\",\n  .progress = \"text\")\n\nReviewData &lt;- ReviewResults$data\n\n\nPubMedQuery &lt;- \"virtual+arthroplasty*[Title/Abstract] AND english[LA] AND Journal Article[PT] AND 2010:2025[DP]\"\n\nPMResCount &lt;- pmQueryTotalCount(query = PubMedQuery, api_key = NULL)\n\nPMResCount$total_count\n\n[1] 6\n\n\n\nPMResData &lt;- pmApiRequest(query = PubMedQuery, limit = PMResCount$total_count, api_key = NULL)\n\nDocuments  6  of  6 \n\nPMResDataRefined &lt;- pmApi2df(PMResData)\n\n================================================================================\n\n\nWhat can we learn from relevant articles\nVirtual clinic reportedly saved the orthopaedic department at Frankston hospital ~$250k and 300 outpatient clinic hours (2017-2018) by shifting 30% of their appointments for total knee cases to virtual followup (Lim, Du, and Calligeros 2022).\nA cohort study from the UK (Joseph, Nagy, and Fountain 2021) enrolled a combined sample of total hips and knees (n = 148) into a virtual clinic (radiographs and PROMs) and reported an average saving of £10449 per consultant per year.\nPatient satisfaction after participating in a virtual clinic are also reasonably high (El Ashmawy et al. 2021), however this has yet to be tested in a randomised trial.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Part 1 - Question Check</span>"
+    ]
+  },
+  {
+    "objectID": "SVR - Part 1 - Question Check.html#related-work",
+    "href": "SVR - Part 1 - Question Check.html#related-work",
+    "title": "3  Part 1 - Question Check",
+    "section": "6.2 Related Work",
+    "text": "6.2 Related Work\nThe SHARKS governance report [link] shows that PROMs trajectories over time can be highly variable in the QEII population and that a demarcation could be established for patients with lower scores that should be prioritised for more intensive review, versus patients that are doing well and could be reviewed as required when circumstances change. This is apparent for both total knee (Figure 22) and total hip (Figure 24).\nAdditional work from the SHARKS registry has identified PROMs-based phenotypes in total knee arthroplasty cases at baseline assessment (McGill et al. 2025) that may also inform triaging of cases that could warrant different forms of follow up after hospital discharge.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Part 1 - Question Check</span>"
+    ]
+  },
+  {
+    "objectID": "SVR - Part 1 - Question Check.html#virtual-clinic-composition",
+    "href": "SVR - Part 1 - Question Check.html#virtual-clinic-composition",
+    "title": "3  Part 1 - Question Check",
+    "section": "6.3 Virtual Clinic Composition",
+    "text": "6.3 Virtual Clinic Composition\n\n\n\nTable 6.1: Summary of virtual clinic composition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCitation\nPopulation - Setting\nPatient Invitation\nEscalation\nMeasurements\nSchedule\nNotes\n\n\n\n\n(NJ Preston et al. 2023)\nUK; 5 large centres\nmix of regional teaching hospitals and nonacute outpatient clinics\n19-Jun-2018 to 11-Dec-2018\nN = 561\nImplemented as routine care at each site for pilot period\nClinical decision algorithm (Figure 1)\nStandardised approach (N. Preston et al. 2019)\nPROMs and radiograph report\n6 week followup with clinician option to schedule further appointments\n“The VC required adaptation of administration pathways, creation of new clinic codes and changes to Patient Administration System pathways.”\n\n\n(Lovelock et al. 2018)\nDepartment database (hip and knee) (Frankston Hospital, Vic)\nN = 2076 due for followup Jul 2014 - Dec 2016\nContacted via post - with cover letter, radiograph referral and PROMs\nReview by consultant surgeon\nPROMs and radiograph (no report)\nAny patient due for followup at any one of the 1, 5 or 7 followup timepoints\nSurgeons undertook…reviews in spare clinical time, …between patients in the outpatient clinic, and…between cases in theatre\n\n\n(El Ashmawy et al. 2021)\nUniversity Hospitals Plymouth NHS Trust\nhip and knee\nN = 1749 invited\nVJRC invite pack in the post\nreview by Arthroplasty Physiotherapy Specialist\nVJRC invite pack cover letter, return envelope, Patient Reported Outcome Measures (PROMs) booklet and detailed info to attend a local radiology facility\nReferred from 6 week appointment for VC at 1 year appointment; Patients due for 7 year+ appointments were invited for VC\nA reminder call or letter was sent to patients if the completed paperwork and/or 76 plain radiographs were not received after 4 weeks of VJRC invitation.\n\n\n(Richards, Stoddart, and Bolland 2022)\nMusgrove Park Hospital (MPH), Taunton UK\nhip only\nJan 17 - Dec 2018\nN = 240\nVJRC invite pack in the post\nOxford Hip Score &lt; 33 or unacceptable xray\nCover letter - PROMs booklet; instructions for radiography\nReferred from 6 week appointment for VC at 1 year appointment; Patients due for 7 year+ appointments were invited for VC",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Part 1 - Question Check</span>"
     ]
   }
 ]
