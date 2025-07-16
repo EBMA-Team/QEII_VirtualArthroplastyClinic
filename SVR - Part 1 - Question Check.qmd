@@ -70,11 +70,11 @@ PMResDataRefined <- pmApi2df(PMResData)
 
 What can we learn from relevant articles
 
-Virtual clinic reportedly saved the orthopaedic department at Frankston hospital \~\$250k and 300 outpatient clinic hours (2017-2018) by shifting 30% of their appointments for total knee cases to virtual followup [@lim2022].
+Virtual clinic reportedly saved the orthopaedic department at Frankston hospital \~\$250k and 300 outpatient clinic hours (2017-2018) by shifting 30% of their appointments for total knees to virtual followup [@lim2022].
 
 A cohort study from the UK [@joseph2021] enrolled a combined sample of total hips and knees (n = 148) into a virtual clinic (radiographs and PROMs) and reported an average saving of £10449 per consultant per year.
 
-Patient satisfaction after participating in a virtual clinic are also reasonably high [@elashmawy2021], however this has yet to be tested in a randomised trial.
+Patient satisfaction after participating in a virtual clinic is also reasonably high [@elashmawy2021], however this has yet to be tested in a randomised trial.
 
 ## Related Work
 
@@ -123,13 +123,19 @@ Summary of virtual clinic composition
 asdfasdf
 
 ::: {#tbl-question}
-| Component | Study - Specific | Comments |
-|----|----|----|
-| Population | In patients presenting with end-stage knee arthritis at a public metropolitan hospital electing to undergo total knee arthroplasty |  |
-| Intervention |  |  |
-| Comparator |  |  |
-| Outcomes |  |  |
-| Study Design |  |  |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+| Component             | Study - Specific                                                                                                                   | Comments              |
++=======================+====================================================================================================================================+=======================+
+| Population            | In patients presenting with end-stage knee arthritis at a public metropolitan hospital electing to undergo total knee arthroplasty |                       |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+| Intervention          |                                                                                                                                    |                       |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+| Comparator            |                                                                                                                                    |                       |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+| Outcomes              |                                                                                                                                    |                       |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+| Study Design          |                                                                                                                                    |                       |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
 
 Summary of question in PICOS format
 :::
