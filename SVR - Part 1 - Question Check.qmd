@@ -32,6 +32,8 @@ pacman::p_load(
 
 # Background and Context
 
+There is an opportunity to increase patient access to care within the context of a public hospital department with respect to total joint arthroplasty by reducing low-value imaging [@kjelle2024] and removing routine in-person followup beyond early postoperative discharge for well-functioning patients.
+
 ## Literature Review
 
 Search crossref for related articles
@@ -123,34 +125,50 @@ Summary of virtual clinic composition
 asdfasdf
 
 ::: {#tbl-question}
-+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-| Component             | Study - Specific                                                                                                                   | Comments              |
-+=======================+====================================================================================================================================+=======================+
-| Population            | In patients presenting with end-stage knee arthritis at a public metropolitan hospital electing to undergo total knee arthroplasty |                       |
-+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-| Intervention          |                                                                                                                                    |                       |
-+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-| Comparator            |                                                                                                                                    |                       |
-+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-| Outcomes              |                                                                                                                                    |                       |
-+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
-| Study Design          |                                                                                                                                    |                       |
-+-----------------------+------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
++--------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+---------------------+
+| Component    | Question 1 - Compliance/Engagement                                                                                                   | Question 2 - Safety and Efficacy | Comments            |
++==============+======================================================================================================================================+==================================+=====================+
+| Population   | In patients electing to undergo total knee arthroplasty for the treatment of end-stage arthritis within a public hospital department |                                  |                     |
++--------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+---------------------+
+| Intervention |                                                                                                                                      |                                  |                     |
++--------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+---------------------+
+| Comparator   |                                                                                                                                      |                                  |                     |
++--------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+---------------------+
+| Outcomes     |                                                                                                                                      |                                  |                     |
++--------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+---------------------+
+| Study Design |                                                                                                                                      |                                  |                     |
++--------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+---------------------+
 
 Summary of question in PICOS format
 :::
 
 # Population
 
+## Discharge Criteria
+
+## Other Inclusion Criteria
+
+Are appropriate for followup by the SHARKS registry
+
+-   Are contactable by phone
+
+-   Do not present with any physical or mental impairments to responding to online questionnaires communicated by sms
+
 # Intervention
 
-asfd
+Discharge from department care at 6 weeks
+
+Followup with SHARKS scheduled timepoints
 
 # Comparator
 
 # Outcomes
 
 # Study Design and Quality
+
+Could nearly be considered randomised if allocation to consultant team is randomly assigned.
+
+<!--# Need to investigate how consultant team allocation is conducted within hospital system -->
 
 # Question-Gap Alignment
 
