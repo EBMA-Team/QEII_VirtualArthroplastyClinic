@@ -1,9 +1,11 @@
 # Introduction
 
-This is a book created from markdown and executable code.
+The following online book contains chapters representing the three components of an EBMA study viability report;
 
-See @knuth84 for additional discussion of literate programming.
+1.  Question Check - statement of the question and associated hypotheses. Uses the PICOS question framework to work through each component of a question and discuss pertinent literature to inform the relevant components of a proposed study.
 
-```{r}
-1 + 1
-```
+2.  Viability Assessment - a comprehensive review of the logistical and statistical elements of the study plan and aligning them to the resources available for the completion of a proposed study.
+
+3.  Study Plan - assuming that the question is agreed by key stakeholders and sponsor, and that the viability assessment has returned a favourable review, a plan of action is presented to commence the proposed investigation.
+
+With this modular approach to study planning, poorly framed questions or insurmountable risks to project completion can be identified early and the fallacy of sunk investment can be mitigated.

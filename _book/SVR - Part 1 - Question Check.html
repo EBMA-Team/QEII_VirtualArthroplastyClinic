@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -218,16 +184,39 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review"><span class="header-section-number">6.1</span> Literature Review</a></li>
   <li><a href="#related-work" id="toc-related-work" class="nav-link" data-scroll-target="#related-work"><span class="header-section-number">6.2</span> Related Work</a></li>
-  <li><a href="#virtual-clinic-composition" id="toc-virtual-clinic-composition" class="nav-link" data-scroll-target="#virtual-clinic-composition"><span class="header-section-number">6.3</span> Virtual Clinic Composition</a></li>
   </ul></li>
-  <li><a href="#study-question" id="toc-study-question" class="nav-link" data-scroll-target="#study-question"><span class="header-section-number">7</span> Study Question</a></li>
-  <li><a href="#population" id="toc-population" class="nav-link" data-scroll-target="#population"><span class="header-section-number">8</span> Population</a></li>
-  <li><a href="#intervention" id="toc-intervention" class="nav-link" data-scroll-target="#intervention"><span class="header-section-number">9</span> Intervention</a></li>
+  <li><a href="#study-question" id="toc-study-question" class="nav-link" data-scroll-target="#study-question"><span class="header-section-number">7</span> Study Question</a>
+  <ul class="collapse">
+  <li><a href="#hypotheses" id="toc-hypotheses" class="nav-link" data-scroll-target="#hypotheses"><span class="header-section-number">7.1</span> Hypotheses</a>
+  <ul class="collapse">
+  <li><a href="#q1-complianceengagement" id="toc-q1-complianceengagement" class="nav-link" data-scroll-target="#q1-complianceengagement"><span class="header-section-number">7.1.1</span> Q1 Compliance/Engagement</a></li>
+  <li><a href="#q2-efficacy-and-safety-non-inferiority" id="toc-q2-efficacy-and-safety-non-inferiority" class="nav-link" data-scroll-target="#q2-efficacy-and-safety-non-inferiority"><span class="header-section-number">7.1.2</span> Q2 Efficacy and Safety (Non-inferiority)</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#population" id="toc-population" class="nav-link" data-scroll-target="#population"><span class="header-section-number">8</span> Population</a>
+  <ul class="collapse">
+  <li><a href="#discharge-criteria" id="toc-discharge-criteria" class="nav-link" data-scroll-target="#discharge-criteria"><span class="header-section-number">8.1</span> Discharge Criteria</a></li>
+  <li><a href="#other-inclusion-criteria" id="toc-other-inclusion-criteria" class="nav-link" data-scroll-target="#other-inclusion-criteria"><span class="header-section-number">8.2</span> Other Inclusion Criteria</a></li>
+  </ul></li>
+  <li><a href="#intervention" id="toc-intervention" class="nav-link" data-scroll-target="#intervention"><span class="header-section-number">9</span> Intervention</a>
+  <ul class="collapse">
+  <li><a href="#virtual-clinic-composition" id="toc-virtual-clinic-composition" class="nav-link" data-scroll-target="#virtual-clinic-composition"><span class="header-section-number">9.1</span> Virtual Clinic Composition</a></li>
+  <li><a href="#proposed-intervention-draft" id="toc-proposed-intervention-draft" class="nav-link" data-scroll-target="#proposed-intervention-draft"><span class="header-section-number">9.2</span> Proposed Intervention (Draft)</a>
+  <ul class="collapse">
+  <li><a href="#discharge-from-department-care-at-6-weeks" id="toc-discharge-from-department-care-at-6-weeks" class="nav-link" data-scroll-target="#discharge-from-department-care-at-6-weeks"><span class="header-section-number">9.2.1</span> Discharge from department care at 6 weeks</a></li>
+  <li><a href="#followup-schedule" id="toc-followup-schedule" class="nav-link" data-scroll-target="#followup-schedule"><span class="header-section-number">9.2.2</span> Followup schedule</a></li>
+  <li><a href="#adjunct-pathways" id="toc-adjunct-pathways" class="nav-link" data-scroll-target="#adjunct-pathways"><span class="header-section-number">9.2.3</span> Adjunct Pathways</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#comparator" id="toc-comparator" class="nav-link" data-scroll-target="#comparator"><span class="header-section-number">10</span> Comparator</a></li>
-  <li><a href="#outcomes" id="toc-outcomes" class="nav-link" data-scroll-target="#outcomes"><span class="header-section-number">11</span> Outcomes</a></li>
+  <li><a href="#outcomes" id="toc-outcomes" class="nav-link" data-scroll-target="#outcomes"><span class="header-section-number">11</span> Outcomes</a>
+  <ul class="collapse">
+  <li><a href="#patient-engagement" id="toc-patient-engagement" class="nav-link" data-scroll-target="#patient-engagement"><span class="header-section-number">11.1</span> Patient Engagement</a></li>
+  <li><a href="#safety-and-efficacy" id="toc-safety-and-efficacy" class="nav-link" data-scroll-target="#safety-and-efficacy"><span class="header-section-number">11.2</span> Safety and Efficacy</a></li>
+  <li><a href="#unintended-harms" id="toc-unintended-harms" class="nav-link" data-scroll-target="#unintended-harms"><span class="header-section-number">11.3</span> Unintended Harms</a></li>
+  </ul></li>
   <li><a href="#study-design-and-quality" id="toc-study-design-and-quality" class="nav-link" data-scroll-target="#study-design-and-quality"><span class="header-section-number">12</span> Study Design and Quality</a></li>
   <li><a href="#question-gap-alignment" id="toc-question-gap-alignment" class="nav-link" data-scroll-target="#question-gap-alignment"><span class="header-section-number">13</span> Question-Gap Alignment</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">14</span> References</a></li>
   </ul>
 </nav>
     </div>
@@ -265,152 +254,35 @@ div.csl-indent {
 <section id="preparation" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Preparation</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">require</span>(<span class="st">"pacman"</span>)) <span class="fu">install.packages</span>(<span class="st">"pacman"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Loading required package: pacman</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tidyverse"</span>,</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"epoxy"</span>,</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"grateful"</span>,</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"parallel"</span>,</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"progressr"</span>,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"synthesisr"</span>,</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rcrossref"</span>,</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"pubmedR"</span>,</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">install =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">update =</span> <span class="cn">FALSE</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="background-and-context" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Background and Context</h1>
+<p>There is an opportunity to increase patient access to care within the context of a public hospital department with respect to total joint arthroplasty by reducing low-value imaging <span class="citation" data-cites="kjelle2024">(<a href="references.html#ref-kjelle2024" role="doc-biblioref">Kjelle et al. 2024</a>)</span> and removing routine in-person followup beyond early postoperative discharge for well-functioning patients. The adverse effects of long-wait times have been well document for both in-person appointments <span class="citation" data-cites="virani2022">(<a href="references.html#ref-virani2022" role="doc-biblioref">Virani et al. 2022</a>)</span> as well as surgery <span class="citation" data-cites="scott2019 clement2021">(<a href="references.html#ref-scott2019" role="doc-biblioref">Scott, MacDonald, and Howie 2019</a>; <a href="references.html#ref-clement2021" role="doc-biblioref">Clement et al. 2021</a>)</span>. There remains a dire need to improve access to specialist services in Australia, particularly in joint replacement <span class="citation" data-cites="breadon2025">(<a href="references.html#ref-breadon2025" role="doc-biblioref">Breadon et al. 2025</a>)</span>. Public hospitals continue to play an important role in providing access, even though the majority of elective surgeries are performed in the private system <span class="citation" data-cites="AIHW2025">(<a href="references.html#ref-AIHW2025" role="doc-biblioref">Health and Welfare 14 May 2025</a>)</span>.</p>
+<p>Disinvestment in long-term followup of hip and knee arthroplasty remains a developing area of interest for the efficient provision of surgical services to populations in need. The current guidelines for followup in hip arthroplasty for example are largely developed by expert consensus, rather than primary evidence <span class="citation" data-cites="loppini2022">(<a href="references.html#ref-loppini2022" role="doc-biblioref">Loppini et al. 2022</a>)</span>. More recent development of evidence-based recommendations affirm the safety of disinvestment in followups for routine hip and knee arthroplasty beyond 6 weeks <span class="citation" data-cites="kingsbury2023">(<a href="references.html#ref-kingsbury2023" role="doc-biblioref">Sarah R. Kingsbury et al. 2023</a>)</span>. For example, <span class="citation" data-cites="cassidy2019">(<a href="references.html#ref-cassidy2019" role="doc-biblioref">Cassidy, O hEireamhoin, and Beverland 2019</a>)</span> detected 80 revisions from 4802 total hip arthroplasties, with just two detected from routine followups, with neither from long-term followup appointments.</p>
+<p>Similarly, there is a large potential for cost-reduction in the provision of surgical services through the targeted disinvestment in low-value followup imaging <span class="citation" data-cites="kjelle2024">(<a href="references.html#ref-kjelle2024" role="doc-biblioref">Kjelle et al. 2024</a>)</span>. For example, postoperative imaging immediately after total hip arthroplasty rarely reveals complications and offers minimal clinical utility <span class="citation" data-cites="brown2022">(<a href="references.html#ref-brown2022" role="doc-biblioref">Brown et al. 2022</a>)</span>. These findings have also been observed in routine followup imaging after knee arthroplasty, with high associated costs <span class="citation" data-cites="birir2021">(<a href="references.html#ref-birir2021" role="doc-biblioref">Birir et al. 2021</a>)</span>. In-person orthopaedic clinic appointments present considerable opportunity costs for patients with respect to travel, especially for regional and rural patients <span class="citation" data-cites="thatcher2021">(<a href="references.html#ref-thatcher2021" role="doc-biblioref">Thatcher et al. 2021</a>)</span>. Initial investigation into patient preferences in the UK suggest that patients may prefer questionnaires as a screening tool for an opt-in service for followups after total hip arthroplasty in the medium to long term <span class="citation" data-cites="smith2022">(<a href="references.html#ref-smith2022" role="doc-biblioref">Smith, Turner, and Dures 2022</a>)</span>. The cost utility of PROMs-based remote monitoring has been demonstrated in a large multicentre randomised trial in Germany <span class="citation" data-cites="schöner2024">(<a href="references.html#ref-schöner2024" role="doc-biblioref">Schöner et al. 2024</a>)</span>, in hip replacements, but not as clearly in knee replacements. Switching to a virtual model for this patient population also has benefits for the service , as well as the environmental impacts of reducing imaging, as well as patient travel to the physical clinic <span class="citation" data-cites="moldovan2025">(<a href="references.html#ref-moldovan2025" role="doc-biblioref">Moldovan and Moldovan 2025</a>)</span>.</p>
+<p>In summary, remote monitoring of PROMs may offer an efficient option for reviewing high numbers of total joint replacements over time.</p>
 <section id="literature-review" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="literature-review"><span class="header-section-number">6.1</span> Literature Review</h2>
-<p>Search crossref for related articles</p>
-<div class="cell" data-execute="false">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ReviewResults <span class="ot">&lt;-</span> rcrossref<span class="sc">::</span><span class="fu">cr_works</span>(</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">query =</span><span class="st">"virtual+arthoplasty+clinic"</span>,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">.progress =</span> <span class="st">"text"</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>ReviewData <span class="ot">&lt;-</span> ReviewResults<span class="sc">$</span>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A search was performed in Pubmed and Google Scholar using the following terms;</p>
+<div id="search">
+<p>(“remote monitor*” OR “virtual clinic”) AND (arthroplasty OR “total joint”)</p>
 </div>
-<div class="cell" data-execute="false">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>PubMedQuery <span class="ot">&lt;-</span> <span class="st">"virtual+arthroplasty*[Title/Abstract] AND english[LA] AND Journal Article[PT] AND 2010:2025[DP]"</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>PMResCount <span class="ot">&lt;-</span> <span class="fu">pmQueryTotalCount</span>(<span class="at">query =</span> PubMedQuery, <span class="at">api_key =</span> <span class="cn">NULL</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>PMResCount<span class="sc">$</span>total_count</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 6</code></pre>
-</div>
-</div>
-<div class="cell" data-execute="false">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>PMResData <span class="ot">&lt;-</span> <span class="fu">pmApiRequest</span>(<span class="at">query =</span> PubMedQuery, <span class="at">limit =</span> PMResCount<span class="sc">$</span>total_count, <span class="at">api_key =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Documents  6  of  6 </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>PMResDataRefined <span class="ot">&lt;-</span> <span class="fu">pmApi2df</span>(PMResData)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>================================================================================</code></pre>
-</div>
-</div>
-<p>What can we learn from relevant articles</p>
-<p>Virtual clinic reportedly saved the orthopaedic department at Frankston hospital ~$250k and 300 outpatient clinic hours (2017-2018) by shifting 30% of their appointments for total knee cases to virtual followup <span class="citation" data-cites="lim2022">(<a href="references.html#ref-lim2022" role="doc-biblioref">Lim, Du, and Calligeros 2022</a>)</span>.</p>
-<p>A cohort study from the UK <span class="citation" data-cites="joseph2021">(<a href="references.html#ref-joseph2021" role="doc-biblioref">Joseph, Nagy, and Fountain 2021</a>)</span> enrolled a combined sample of total hips and knees (n = 148) into a virtual clinic (radiographs and PROMs) and reported an average saving of £10449 per consultant per year.</p>
-<p>Patient satisfaction after participating in a virtual clinic are also reasonably high <span class="citation" data-cites="elashmawy2021">(<a href="references.html#ref-elashmawy2021" role="doc-biblioref">El Ashmawy et al. 2021</a>)</span>, however this has yet to be tested in a randomised trial.</p>
+<p>Articles were reviewed by hand and citations lists, as well as the <em>cited by</em> function of the reference management system (Paperpile, Paperpile LLC, USA) to retrieve articles of interest. The curated <a href="https://docs.google.com/spreadsheets/d/1s8jsraWo8Gz1EzKLUCy75o-X7zRQ8mO1d9Gg4bf601s/edit?usp=sharing">citation list</a> was filtered and labelled with key benchmark papers identified.</p>
 </section>
 <section id="related-work" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="related-work"><span class="header-section-number">6.2</span> Related Work</h2>
 <p>The SHARKS governance report [<a href="https://coreyscholes-sharks-governance.share.connect.posit.cloud/">link</a>] shows that PROMs trajectories over time can be highly variable in the QEII population and that a demarcation could be established for patients with lower scores that should be prioritised for more intensive review, versus patients that are doing well and could be reviewed as required when circumstances change. This is apparent for both total knee (Figure 22) and total hip (Figure 24).</p>
 <p>Additional work from the SHARKS registry has identified PROMs-based phenotypes in total knee arthroplasty cases at baseline assessment <span class="citation" data-cites="McGill2025">(<a href="references.html#ref-McGill2025" role="doc-biblioref">McGill et al. 2025</a>)</span> that may also inform triaging of cases that could warrant different forms of follow up after hospital discharge.</p>
-</section>
-<section id="virtual-clinic-composition" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="virtual-clinic-composition"><span class="header-section-number">6.3</span> Virtual Clinic Composition</h2>
-<div id="tbl-vc-composition" class="quarto-float anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-vc-composition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;6.1: Summary of virtual clinic composition
-</figcaption>
-<div aria-describedby="tbl-vc-composition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
-<colgroup>
-<col style="width: 2%">
-<col style="width: 10%">
-<col style="width: 11%">
-<col style="width: 7%">
-<col style="width: 24%">
-<col style="width: 18%">
-<col style="width: 24%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Citation</th>
-<th>Population - Setting</th>
-<th>Patient Invitation</th>
-<th>Escalation</th>
-<th>Measurements</th>
-<th>Schedule</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="citation" data-cites="preston2023">(<a href="references.html#ref-preston2023" role="doc-biblioref">NJ Preston et al. 2023</a>)</span></td>
-<td><p>UK; 5 large centres</p>
-<p>mix of regional teaching hospitals and nonacute outpatient clinics</p>
-<p>19-Jun-2018 to 11-Dec-2018</p>
-<p>N = 561</p></td>
-<td>Implemented as routine care at each site for pilot period</td>
-<td>Clinical decision algorithm (Figure 1)</td>
-<td><p>Standardised approach <span class="citation" data-cites="preston2019">(<a href="references.html#ref-preston2019" role="doc-biblioref">N. Preston et al. 2019</a>)</span></p>
-<p>PROMs and radiograph report</p></td>
-<td>6 week followup with clinician option to schedule further appointments</td>
-<td>“The VC required adaptation of administration pathways, creation of new clinic codes and changes to Patient Administration System pathways.”</td>
-</tr>
-<tr class="even">
-<td><span class="citation" data-cites="lovelock2018">(<a href="references.html#ref-lovelock2018" role="doc-biblioref">Lovelock et al. 2018</a>)</span></td>
-<td><p>Department database (hip and knee) (Frankston Hospital, Vic)</p>
-<p>N = 2076 due for followup Jul 2014 - Dec 2016</p></td>
-<td>Contacted via post - with cover letter, radiograph referral and PROMs</td>
-<td>Review by consultant surgeon</td>
-<td>PROMs and radiograph (no report)</td>
-<td>Any patient due for followup at any one of the 1, 5 or 7 followup timepoints</td>
-<td>Surgeons undertook…reviews in spare clinical time, …between patients in the outpatient clinic, and…between cases in theatre</td>
-</tr>
-<tr class="odd">
-<td><span class="citation" data-cites="elashmawy2021">(<a href="references.html#ref-elashmawy2021" role="doc-biblioref">El Ashmawy et al. 2021</a>)</span></td>
-<td><p>University Hospitals Plymouth NHS Trust</p>
-<p>hip and knee</p>
-<p>N = 1749 invited</p></td>
-<td>VJRC invite pack in the post</td>
-<td>review by Arthroplasty Physiotherapy Specialist</td>
-<td>VJRC invite pack cover letter, return envelope, Patient Reported Outcome Measures (PROMs) booklet and detailed info to attend a local radiology facility</td>
-<td>Referred from 6 week appointment for VC at 1 year appointment; Patients due for 7 year+ appointments were invited for VC</td>
-<td>A reminder call or letter was sent to patients if the completed paperwork and/or 76 plain radiographs were not received after 4 weeks of VJRC invitation.</td>
-</tr>
-<tr class="even">
-<td><span class="citation" data-cites="richards2022">(<a href="references.html#ref-richards2022" role="doc-biblioref">Richards, Stoddart, and Bolland 2022</a>)</span></td>
-<td><p>Musgrove Park Hospital (MPH), Taunton UK</p>
-<p>hip only</p>
-<p>Jan 17 - Dec 2018</p>
-<p>N = 240</p></td>
-<td>VJRC invite pack in the post</td>
-<td>Oxford Hip Score &lt; 33 or unacceptable xray</td>
-<td>Cover letter - PROMs booklet; instructions for radiography</td>
-<td>Referred from 6 week appointment for VC at 1 year appointment; Patients due for 7 year+ appointments were invited for VC</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
+<p>Planning currently underway for an analysis of the tibiofemoral instability cohort with respect to case-mixture adjustment, will also have implications for the proposed activity. By constructing a case-mixture adjustment model for postoperative scores in the arthroplasty cohorts of SHARKS, an individualised expectation for PROMs scores can be generated and used to benchmark patient responses at the selected followup timepoints.</p>
 </section>
 </section>
 <section id="study-question" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Study Question</h1>
-<p>asdfasdf</p>
+<p>To clarify the study aims and purpose, the following question(s) have been proposed in the PICOS format <span class="citation" data-cites="amir-behghadami2020">(<a href="references.html#ref-amir-behghadami2020" role="doc-biblioref">Amir-Behghadami and Janati 2020</a>)</span> to facilitate clear discussion over the key parameters that will inform conduct of future research.</p>
 <div id="tbl-question" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-question-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -419,31 +291,279 @@ Table&nbsp;7.1: Summary of question in PICOS format
 <div aria-describedby="tbl-question-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <colgroup>
-<col style="width: 9%">
-<col style="width: 81%">
-<col style="width: 9%">
+<col style="width: 5%">
+<col style="width: 58%">
+<col style="width: 35%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Component</th>
-<th>Study - Specific</th>
+<th></th>
 <th>Comments</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td><strong>Population</strong></td>
+<td>In patients electing to undergo primary joint arthroplasty within a public hospital department and deemed suitable for discharge to a <em>virtual clinic</em> at the 6-week in-person consultation</td>
+<td>The distinction between selective and routine discharge may need to be further refined in the protocol</td>
+</tr>
+<tr class="even">
+<td><strong>Intervention</strong></td>
+<td>requested to provide feedback via links (communicated via sms) to standardised patient-reported outcomes and free-text commentary regarding change in status</td>
+<td>Further discussion may be required on the merits of bidirectional vs unidirectional messaging</td>
+</tr>
+<tr class="odd">
+<td><strong>Comparator</strong></td>
+<td>compared to standard of care with repeated in-person followup appointments in hospital clinic and radiographs</td>
+<td>How the comparator group is defined with respect to routine SHARKS contact may need further refinement</td>
+</tr>
+<tr class="even">
+<td><strong>Outcomes</strong></td>
+<td><p><u>Q1 - Compliance | Engagement</u></p>
+<p>Is there a clinically useful reduction in loss - to - followup compared to did-not-attend incidence for in-person appointments?</p>
+<p><u>Q2 - Efficacy and Safety</u></p>
+<p>Is the <em>virtual clinic</em> non-inferior with respect to emergency department representations and/or hospital readmissions?</p></td>
+<td>See notes below hypotheses</td>
+</tr>
+<tr class="odd">
+<td><strong>Study Design</strong></td>
+<td>Registry-embedded service evaluation</td>
+<td>Consideration of data linkage for safety and efficacy will be required to detect accurate outcomes for both groups</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<section id="hypotheses" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="hypotheses"><span class="header-section-number">7.1</span> Hypotheses</h2>
+<p>Given the questions summarised in <a href="#tbl-question" class="quarto-xref">Table&nbsp;<span>7.1</span></a>, the following hypotheses are drafted for planning purposes.</p>
+<div id="hypotheses1">
+<section id="q1-complianceengagement" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="q1-complianceengagement"><span class="header-section-number">7.1.1</span> Q1 Compliance/Engagement</h3>
+<p><strong>Statistical Hypotheses:</strong></p>
+<ul>
+<li><p><strong>Null Hypothesis (H₀):</strong> There is no difference in loss-to-follow-up rates between SMS-based virtual clinic follow-up and standard in-person follow-up appointments (p₁ = p₂, where p₁ = virtual clinic loss-to-follow-up rate, p₂ = standard care did-not-attend rate)</p></li>
+<li><p><strong>Alternative Hypothesis (H₁):</strong> There is a difference in loss-to-follow-up rates between SMS-based virtual clinic follow-up and standard in-person follow-up appointments (p₁ ≠ p₂)</p></li>
+</ul>
+<p><strong>Clinical Hypotheses:</strong></p>
+<ul>
+<li><p><strong>Null Hypothesis:</strong> SMS-based virtual clinic follow-up does not provide a clinically meaningful reduction in loss-to-follow-up compared to standard in-person appointments</p></li>
+<li><p><strong>Alternative Hypothesis:</strong> SMS-based virtual clinic follow-up provides a clinically meaningful reduction in loss-to-follow-up compared to standard in-person appointments</p></li>
+</ul>
+</section>
+</div>
+<div id="callout1" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To complete planning, the statement will need to define what constitutes a “clinically useful reduction” <span class="citation" data-cites="hickey2018">(<a href="references.html#ref-hickey2018" role="doc-biblioref">Hickey et al. 2018</a>)</span> - this could be expressed as either an absolute difference (e.g., 10% reduction) or relative difference (e.g., 25% relative reduction).</p>
+</div>
+</div>
+<div id="hypotheses2">
+<section id="q2-efficacy-and-safety-non-inferiority" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="q2-efficacy-and-safety-non-inferiority"><span class="header-section-number">7.1.2</span> Q2 Efficacy and Safety (Non-inferiority)</h3>
+<p><strong>Statistical Hypotheses:</strong></p>
+<ul>
+<li><p><strong>Null Hypothesis (H₀):</strong> The virtual clinic is inferior to standard care with respect to emergency department representations and/or hospital readmissions (p₁ - p₂ &gt; δ, where δ is the non-inferiority margin)</p></li>
+<li><p><strong>Alternative Hypothesis (H₁):</strong> The virtual clinic is non-inferior to standard care with respect to emergency department representations and/or hospital readmissions (p₁ - p₂ ≤ δ)</p></li>
+</ul>
+<p><strong>Clinical Hypotheses:</strong></p>
+<ul>
+<li><p><strong>Null Hypothesis:</strong> SMS-based virtual clinic follow-up results in clinically unacceptable higher rates of emergency department representations and/or hospital readmissions compared to standard in-person follow-up</p></li>
+<li><p><strong>Alternative Hypothesis:</strong> SMS-based virtual clinic follow-up does not result in clinically unacceptable higher rates of emergency department representations and/or hospital readmissions compared to standard in-person follow-up (i.e., is non-inferior)</p></li>
+</ul>
+</section>
+</div>
+<div id="callout2" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <em>non-inferiority margin</em> (δ) <span class="citation" data-cites="piaggio2012">(<a href="references.html#ref-piaggio2012" role="doc-biblioref">Piaggio et al. 2012</a>)</span> will need to be established a priori based on clinical judgment and previous literature. This margin represents the maximum acceptable increase in adverse outcomes that would still consider the virtual clinic approach acceptable given its potential benefits (convenience, cost-effectiveness, resource utilization).</p>
+</div>
+</div>
+</section>
+</section>
+<section id="population" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Population</h1>
+<p>The population of interest in the related literature has been overwhelmingly primary lower limb joint arthroplasty, although there have been exceptions where the selection criteria was not limited to the arthroplasty type (e.g.&nbsp;“all arthroplasty patients with an upcoming appointment”). There has been a body of work on virtual clinics in mostly public or teaching hospitals within the UK <span class="citation" data-cites="preston2023 kingsbury2016 richards2022 fisher2020">(<a href="references.html#ref-preston2023" role="doc-biblioref">NJ Preston et al. 2023</a>; <a href="references.html#ref-kingsbury2016" role="doc-biblioref">S. R. Kingsbury et al. 2016</a>; <a href="references.html#ref-richards2022" role="doc-biblioref">Richards, Stoddart, and Bolland 2022</a>; <a href="references.html#ref-fisher2020" role="doc-biblioref">Fisher et al. 2020</a>)</span>, with some work in Europe <span class="citation" data-cites="schöner2024 ulivi2021">(<a href="references.html#ref-schöner2024" role="doc-biblioref">Schöner et al. 2024</a>; <a href="references.html#ref-ulivi2021" role="doc-biblioref">Ulivi et al. 2021</a>)</span>, Canada <span class="citation" data-cites="marsh2014 chahal2024">(<a href="references.html#ref-marsh2014" role="doc-biblioref">Marsh et al. 2014</a>; <a href="references.html#ref-chahal2024" role="doc-biblioref">Chahal et al. 2024</a>)</span>, the United States <span class="citation" data-cites="mehta2020">(<a href="references.html#ref-mehta2020" role="doc-biblioref">Mehta et al. 2020</a>)</span> and Australia (Victoria) <span class="citation" data-cites="lovelock2018 lim2022">(<a href="references.html#ref-lovelock2018" role="doc-biblioref">Lovelock et al. 2018</a>; <a href="references.html#ref-lim2022" role="doc-biblioref">Lim, Du, and Calligeros 2022</a>)</span>. Overall, despite the impacts of the covid19 pandemic on service delivery globally, there has been limited published efforts reporting the implementation of virtual arthroplasty clinics in Australia.</p>
+<section id="discharge-criteria" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="discharge-criteria"><span class="header-section-number">8.1</span> Discharge Criteria</h2>
+<p>The criteria for discharging patients to a virtual clinic in the literature have been sparsely described, or have not fit the implementation or research methodology of the published article. One study <span class="citation" data-cites="mehta2020">(<a href="references.html#ref-mehta2020" role="doc-biblioref">Mehta et al. 2020</a>)</span>, targeted patients with a Risk Assessment and Prediction Tool (RAPT) score that placed them in the at-risk category for facility discharge, before randomising them to a sophisticated patient engagement platform or to usual care. Others have relied on a clinician decision at a face-to-face consultation early in the followup process to determine if the patient is “low-risk” or appropriate for virtual clinic followup <span class="citation" data-cites="batten2017">(<a href="references.html#ref-batten2017" role="doc-biblioref">Batten, Murphy, and Keenan 2017</a>)</span>, while more established clinic models have transitioned to offering virtual follow up routinely <span class="citation" data-cites="fisher2020">(<a href="references.html#ref-fisher2020" role="doc-biblioref">Fisher et al. 2020</a>)</span>. The AOA guidelines for followup <span class="citation" data-cites="broughton2019">(<a href="references.html#ref-broughton2019" role="doc-biblioref">Broughton et al. 2019</a>)</span> may provide a starting point for determining patients “at-risk”, however the risk profile of each of these points in the context of a virtual clinic could be debated;</p>
+<ul>
+<li><p>Young patients (less than 60yo)</p></li>
+<li><p>Active patients (patients engaging in sport, manual work etc)</p></li>
+<li><p>Heavy patients (more than 100kg)</p></li>
+<li><p>Metal on metal articulations</p></li>
+<li><p>Modular neck devices</p></li>
+<li><p>New implant designs yet to establish a proven track record</p></li>
+<li><p>Revision implants and those with lysis or previous infection</p></li>
+<li><p>Implants known to be associated with higher incidence of problems</p></li>
+</ul>
+</section>
+<section id="other-inclusion-criteria" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="other-inclusion-criteria"><span class="header-section-number">8.2</span> Other Inclusion Criteria</h2>
+<p>In the context of the SHARKS registry specifically, with particular attention to the communication modality and appropriateness for engaging with the PROMs pack at each scheduled timepoint and understanding the adjunct pathway for out-of-schedule contact, there are additional criteria for patient selection that may need to be considered. Namely, these relate to the patient’s appropriate for followup with the registry;</p>
+<ul>
+<li>Are contactable by phone (have a phone number on record)</li>
+</ul>
+<div class="cell">
+<p>The incidence of cases without a phone number available for contacting is 1.12% (N = 1246 appointments) with a confidence interval of 0.62 to 1.88%</p>
+</div>
+<ul>
+<li>Do not present with any physical or mental impairments to responding to online questionnaires communicated by sms</li>
+<li>Possess sufficient English skills to navigate the PROMs pack or support of family | friends to provide translation</li>
+</ul>
+</section>
+</section>
+<section id="intervention" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Intervention</h1>
+<p>The specific composition of the intervention in the study question will likely take some further refinement. The literature varies widely within the literature for the methodology of the virtual clinic service, as well as its evaluation.</p>
+<section id="virtual-clinic-composition" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="virtual-clinic-composition"><span class="header-section-number">9.1</span> Virtual Clinic Composition</h2>
+<p>A summary of related studies has been tabled below. The setting, sample size, components of the intervention and a summary of results is available for review.</p>
+<div id="tbl-vc-composition" class="iframe-container quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-vc-composition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;9.1: Summary of virtual clinic composition
+</figcaption>
+<div aria-describedby="tbl-vc-composition-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUDMgG4xsnKrKk2YuWwrpYvQQw2pqWeoE6OTRv4pR1pEEW_xF-xCHYBq_Li5CzKU-rMCye8eHvlFTR/pubhtml?gid=1947770404&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="640" frameborder="0">
+</iframe>
+</div>
+</figure>
+</div>
+<p>The components and definition of a virtual clinic intervention varies substantially between studies and clinical contexts as shown in <a href="#tbl-vc-composition" class="quarto-xref">Table&nbsp;<span>9.1</span></a>. The capacity of the health system provider to incorporate specialised infrastructure to conduct enrolment, patient messaging and clinician alerts broadly determines what methodology is used for both the intervention and the evaluation of the service.</p>
+<p>Although web-based followup has been published for some time <span class="citation" data-cites="marsh2014">(<a href="references.html#ref-marsh2014" role="doc-biblioref">Marsh et al. 2014</a>)</span>, it has not been the most popular approach for virtual clinic followup, although there has been one report of a platform that has been in use for some time in the UK <span class="citation" data-cites="parkes2019">(<a href="references.html#ref-parkes2019" role="doc-biblioref">Parkes et al. 2019</a>)</span>. A combination of patient-reported outcomes - either specially designed for the purpose <span class="citation" data-cites="preston2023 preston2019">(<a href="references.html#ref-preston2023" role="doc-biblioref">NJ Preston et al. 2023</a>; <a href="references.html#ref-preston2019" role="doc-biblioref">N. Preston et al. 2019</a>)</span> or popular standardised measures (e.g.&nbsp;Oxford, EQ5D) <span class="citation" data-cites="richards2022 elashmawy2021">(<a href="references.html#ref-richards2022" role="doc-biblioref">Richards, Stoddart, and Bolland 2022</a>; <a href="references.html#ref-elashmawy2021" role="doc-biblioref">El Ashmawy et al. 2021</a>)</span> collected on paper and returned via mail - combined with a radiograph <span class="citation" data-cites="preston2023 richards2022 joseph2021">(<a href="references.html#ref-preston2023" role="doc-biblioref">NJ Preston et al. 2023</a>; <a href="references.html#ref-richards2022" role="doc-biblioref">Richards, Stoddart, and Bolland 2022</a>; <a href="references.html#ref-joseph2021" role="doc-biblioref">Joseph, Nagy, and Fountain 2021</a>)</span> captured at a convenient location appears to be the mainstay approach. Others have used very detailed patient engagement programs with gamification and bidirectional messaging <span class="citation" data-cites="mehta2020">(<a href="references.html#ref-mehta2020" role="doc-biblioref">Mehta et al. 2020</a>)</span>, or a mobile-based application <span class="citation" data-cites="chahal2024">(<a href="references.html#ref-chahal2024" role="doc-biblioref">Chahal et al. 2024</a>)</span>. The key distinction between the literature and the proposed approach is that the use of web-based patient registries with uni-directional messaging to support patients after <em>discharge</em> from in-person care is relatively rare, with just one paper <span class="citation" data-cites="ulivi2021">(<a href="references.html#ref-ulivi2021" role="doc-biblioref">Ulivi et al. 2021</a>)</span> using this method during the covid pandemic, and even then it was largely facilitated with PROMs collection by phone.</p>
+</section>
+<section id="proposed-intervention-draft" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="proposed-intervention-draft"><span class="header-section-number">9.2</span> Proposed Intervention (Draft)</h2>
+<p>The proposed intervention contains two key components. The first is embedded within the SHARKS registry and comprises the routine PROMs followups designed into the <em>KneeArthritis</em> and <em>HipArthroplasty</em> cohorts. The key difference being the lack of 6month followup for the HA cases.</p>
+<div id="fig-intervention-propose" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-intervention-propose-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><iframe frameborder="0" style="width:100%;height:633px;" src="https://viewer.diagrams.net/?tags=%7B%7D&amp;lightbox=1&amp;highlight=0000ff&amp;edit=_blank&amp;layers=1&amp;nav=1&amp;title=SVR%20Virtual%20Arthroplasty%20Clinic%20Intervention.drawio&amp;dark=0#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1lsdQ6MDXnZg6qzFVyE5s_5nZ9bBz_uDj%26export%3Ddownload" <="" p="">
+</iframe>
+</p></div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-intervention-propose-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9.1: Proposed virtual clinic workflow (intervention)
+</figcaption>
+</figure>
+</div>
+<section id="discharge-from-department-care-at-6-weeks" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="discharge-from-department-care-at-6-weeks"><span class="header-section-number">9.2.1</span> Discharge from department care at 6 weeks</h3>
+<p>There would need to be some communication between the clinic staff and the VC system that a patient had been discharged into virtual clinic at the 6 week appointment. Routine discharge to virtual clinic (unless otherwise directed) would be a much easier system to administer within the registry platform.</p>
+</section>
+<section id="followup-schedule" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="followup-schedule"><span class="header-section-number">9.2.2</span> Followup schedule</h3>
+<div id="fig-followup" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-followup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="SHARKS KA Followup.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-followup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9.2: Followup schedule for SHARKS cohorts - KneeArthritis and HipArthroplasty
+</figcaption>
+</figure>
+</div>
+<p>The current followup schedule for SHARKS is illustrated in <a href="#fig-followup" class="quarto-xref">Figure&nbsp;<span>9.2</span></a>, with the pathology-specific score (OHS or OKS) on the bottom row. Considering the more clinical nature of the proposed virtual service, a 6month timepoint may be appropriate to add and discharge criteria for the virtual clinic added to allow patients the ability to opt-out of futher followups once they achieve an acceptable score on the PROMs pack. This may help to encourage patient compliance with the service and further refine the concept of patient-led care in this context. Contingencies for escalation if patients do not engage at least once may need to be considered as per <span class="citation" data-cites="batten2017">(<a href="references.html#ref-batten2017" role="doc-biblioref">Batten, Murphy, and Keenan 2017</a>)</span>.</p>
+</section>
+<section id="adjunct-pathways" class="level3" data-number="9.2.3">
+<h3 data-number="9.2.3" class="anchored" data-anchor-id="adjunct-pathways"><span class="header-section-number">9.2.3</span> Adjunct Pathways</h3>
+<p>The adjunct pathway (left side of <a href="#fig-intervention-propose" class="quarto-xref">Figure&nbsp;<span>9.1</span></a>) is a persistent portal for a patient enrolled in the virtual clinic to provide feedback or report a change in circumstance that may fall outside of the scheduled followup touch points incorporated into the registry system. A large study of total hip arthroplasties <span class="citation" data-cites="cassidy2019">(<a href="references.html#ref-cassidy2019" role="doc-biblioref">Cassidy, O hEireamhoin, and Beverland 2019</a>)</span>, detected 80 revision cases, in a series of 4802 procedures and 45% of these were revised after self-referral back to the treating surgeon, with nearly all of the remainder re-presenting after referral from other care providers. They concluded that well-performing implants can be discharged from their first postoperative review as long as there is a robust system of self-referral in place. The presence of an pathway for communication from patient to health service varies depending on which virtual clinic model is reviewed in the literature.</p>
+</section>
+</section>
+</section>
+<section id="comparator" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Comparator</h1>
+<p>Of those studies summarised in <a href="#tbl-vc-composition" class="quarto-xref">Table&nbsp;<span>9.1</span></a>, the majority compared the virtual clinic intervention to standard of care, usually with in-person appointments and followup radiographs and set timepoints. In the context of the proposed study question, a number of options for the control group may be considered</p>
+<ul>
+<li><p>Historical controls - work involving the SHARKS registry data examining the early clinical outcomes of the ROSA robotic-assisted knee arthroplasties performed within the department could provide a control group that is relatively recent with respect to emergency department presentation and other complications identified from iemr review.</p></li>
+<li><p>Concurrent controls - depending on sample size requirements, an intervention subgroup of consultants within the department could contribute patients to the virtual clinic and these could be compared to patients engaging during the same time period with non-participating surgeons.</p></li>
+</ul>
+<div id="fig-boa-guidelines" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-boa-guidelines-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="BOA followup 2019.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boa-guidelines-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.1: Summary of British Orthopaedic Association arthroplasty follow up guidelines (Reproduced from
+</figcaption>
+</figure>
+</div>
+<p>The previous BOA guidelines <a href="#fig-boa-guidelines" class="quarto-xref">Figure&nbsp;<span>10.1</span></a> have formed the standard of care for many papers included in <a href="#tbl-vc-composition" class="quarto-xref">Table&nbsp;<span>9.1</span></a>. However, the AOA guidelines from 2019 differ in some respects and historically at QEII most patients are discharged after the 12month followup appointment.</p>
+<p>A key consideration will be the decision to maintain usual SHARKS contact with patients not enrolled in the virtual clinic to mitigate potential crossover effects on in-person clinic attendance or confusion between patients and clinicians about the status of the patient with respect to the virtual clinic, particularly after the service has been explained to them.</p>
+</section>
+<section id="outcomes" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Outcomes</h1>
+<section id="patient-engagement" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="patient-engagement"><span class="header-section-number">11.1</span> Patient Engagement</h2>
+<p>One of the key challenges of maintaining a viable virtual service in following arthroplasty patients after surgery is their willingness to engage with the system. The relevant literature reports variable results in this regard.</p>
+<p>An Australian implementation of a virtual clinic <span class="citation" data-cites="lovelock2018">(<a href="references.html#ref-lovelock2018" role="doc-biblioref">Lovelock et al. 2018</a>)</span> reported 36% compliance (see <a href="#tbl-vc-composition" class="quarto-xref">Table&nbsp;<span>9.1</span></a>) in a pool of 1405 contactable patients for arthroplasty followup over a 2-year period. These results should be interpreted in the context of the virtual clinic service which was relatively rigid in terms of the schedule and involved both paper-based PROMs completion and a radiograph. Modifying the clinic (intervention) to be more patient led and less onerous at each “appointment”, may increase patient engagement rates. In contrast, a similar virtual service implemented in the UK <span class="citation" data-cites="batten2017">(<a href="references.html#ref-batten2017" role="doc-biblioref">Batten, Murphy, and Keenan 2017</a>)</span> reported a much higher compliance rate (89.4%) from a sample of 151 patients eligible (<a href="#tbl-vc-composition" class="quarto-xref">Table&nbsp;<span>9.1</span></a>). The main difference between the two studies was that Batten et al implemented a clear escalation pathway for patients that had not replied and were followed up by phone by a dedicated arthroplasty nurse within the department.</p>
+</section>
+<section id="safety-and-efficacy" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="safety-and-efficacy"><span class="header-section-number">11.2</span> Safety and Efficacy</h2>
+<p>There is a lack of standardisation across interventions and studies with respect to quantification of sensitivity and specificity of virtual clinic interventions and the ability to detect deterioration in clinical status in a timely manner. The studies summarised in <a href="#tbl-vc-composition" class="quarto-xref">Table&nbsp;<span>9.1</span></a> do offer some clues.</p>
+<p>A UK study with paper PROMs and radiographs in 5380 patients (hip or knee arthroplasty) <span class="citation" data-cites="fisher2020">(<a href="references.html#ref-fisher2020" role="doc-biblioref">Fisher et al. 2020</a>)</span> reported no documented admissions resulting from a missed complication at virtual review. The Australian implementation reported one revision case that appeared in between virtual appointments <span class="citation" data-cites="lovelock2018">(<a href="references.html#ref-lovelock2018" role="doc-biblioref">Lovelock et al. 2018</a>)</span>. A followup study <span class="citation" data-cites="lim2022">(<a href="references.html#ref-lim2022" role="doc-biblioref">Lim, Du, and Calligeros 2022</a>)</span> reported an estimated saving of $250K AUD and 300 review hours from the outpatient clinic by switching 30% of appointments to the virtual clinic over the review period, while others have reported cost savings and reduced travel requirements for patients randomised to a web-based virtual clinic <span class="citation" data-cites="marsh2014">(<a href="references.html#ref-marsh2014" role="doc-biblioref">Marsh et al. 2014</a>)</span>. A randomised multicentre study from Germany <span class="citation" data-cites="schöner2024">(<a href="references.html#ref-schöner2024" role="doc-biblioref">Schöner et al. 2024</a>)</span> reported improved patient-reported outcomes in patients randomised to virtual clinic compared to usual care (<a href="#tbl-vc-composition" class="quarto-xref">Table&nbsp;<span>9.1</span></a>).</p>
+<p>To-date, there has been no detailed assessment of adverse events or readmissions using a virtual clinic model as proposed, with some positive indications of the safety and efficacy of virtual clinics reported in the literature.</p>
+</section>
+<section id="unintended-harms" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="unintended-harms"><span class="header-section-number">11.3</span> Unintended Harms</h2>
+</section>
+</section>
+<section id="study-design-and-quality" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Study Design and Quality</h1>
+<p>Could nearly be considered randomised if allocation to consultant team is randomly assigned.</p>
+<!--# Need to investigate how consultant team allocation is conducted within hospital system -->
+</section>
+<section id="question-gap-alignment" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> Question-Gap Alignment</h1>
+<div id="tbl-qg-align" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-qg-align-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;13.1: Summary of alignment between proposed question and literature gap
+</figcaption>
+<div aria-describedby="tbl-qg-align-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 81%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Gap</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
 <td>Population</td>
-<td>In patients presenting with end-stage knee arthritis at a public metropolitan hospital electing to undergo total knee arthroplasty</td>
+<td>There is very little gap in the literature with respect to primary lower limb total joint replacement</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Intervention</td>
-<td></td>
+<td>There is little information regarding the use of web-based registries to replace in-person postoperative followup</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Comparator</td>
-<td></td>
+<td>Comparing a web (sms) based system to usual standard of care has not been formally assessed in the literature</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -453,7 +573,7 @@ Table&nbsp;7.1: Summary of question in PICOS format
 </tr>
 <tr class="odd">
 <td>Study Design</td>
-<td></td>
+<td>Embedding a virtual clinic service within an active registry has been conducted in various forms in the literature, but not one that is fully electronic and wholly sms-based</td>
 <td></td>
 </tr>
 </tbody>
@@ -461,45 +581,86 @@ Table&nbsp;7.1: Summary of question in PICOS format
 </div>
 </figure>
 </div>
-</section>
-<section id="population" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Population</h1>
-</section>
-<section id="intervention" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Intervention</h1>
-<p>asfd</p>
-</section>
-<section id="comparator" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Comparator</h1>
-</section>
-<section id="outcomes" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Outcomes</h1>
-</section>
-<section id="study-design-and-quality" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Study Design and Quality</h1>
-</section>
-<section id="question-gap-alignment" class="level1" data-number="13">
-<h1 data-number="13"><span class="header-section-number">13</span> Question-Gap Alignment</h1>
-</section>
-<section id="references" class="level1" data-number="14">
-<h1 data-number="14"><span class="header-section-number">14</span> References</h1>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-amir-behghadami2020" class="csl-entry" role="listitem">
+Amir-Behghadami, Mehrdad, and Ali Janati. 2020. <span>“Population, Intervention, Comparison, Outcomes and Study (PICOS) Design as a Framework to Formulate Eligibility Criteria in Systematic Reviews.”</span> <em>Emergency Medicine Journal</em> 37 (6): 387–87. <a href="https://doi.org/10.1136/emermed-2020-209567">https://doi.org/10.1136/emermed-2020-209567</a>.
+</div>
+<div id="ref-batten2017" class="csl-entry" role="listitem">
+Batten, Timothy, Nora Murphy, and Jonathan Keenan. 2017. <span>“Developing and Implementing a Virtual Clinic for Follow-up of Major Joint Arthroplasty in the NHS.”</span> <em>British Journal of Healthcare Management</em> 23 (8): 362–65. <a href="https://doi.org/10.12968/bjhc.2017.23.8.362">https://doi.org/10.12968/bjhc.2017.23.8.362</a>.
+</div>
+<div id="ref-birir2021" class="csl-entry" role="listitem">
+Birir, Aseal, Troy B. Amen, Nathan H. Varady, and Antonia F. Chen. 2021. <span>“Clinical Efficacy and Cost-Effectiveness of Postoperative Radiographs After Total Knee Arthroplasty.”</span> <em>The Knee</em> 32 (October): 97–102. <a href="https://doi.org/10.1016/j.knee.2021.08.002">https://doi.org/10.1016/j.knee.2021.08.002</a>.
+</div>
+<div id="ref-breadon2025" class="csl-entry" role="listitem">
+Breadon, Peter, Jim Geraghty, Danielle Jones, and Emily Baldwin. 2025. <span>“Improving Australians’ Access to Specialist Care.”</span> Grattan Institute.
+</div>
+<div id="ref-broughton2019" class="csl-entry" role="listitem">
+Broughton, N., T. Lovelock, R. De Steiger, R. Page, B. Donnelly, M. Solomon, D. Collopy, and S. Mc Mahon. 2019. <span>“Guidelines for Long Term Follow-up of Joint Replacement Patients.”</span> <a href="https://www.aoa.org.au/docs/default-source/advocacy/2019-asa-guidelines-for-long-term-follow-up-of-joint-replacement-patients.pdf?sfvrsn=c9bac204_10">https://www.aoa.org.au/docs/default-source/advocacy/2019-asa-guidelines-for-long-term-follow-up-of-joint-replacement-patients.pdf?sfvrsn=c9bac204_10</a>.
+</div>
+<div id="ref-brown2022" class="csl-entry" role="listitem">
+Brown, Matthew L., David Michel, Arvind Narayanan, Julie C. McCauley, and William D. Bugbee. 2022. <span>“Are Immediate Postoperative X-Rays Valuable in Evaluating Complications of Primary Total Hip Arthroplasty?”</span> <em>Arthroplasty</em> 4 (1). <a href="https://doi.org/10.1186/s42836-022-00148-1">https://doi.org/10.1186/s42836-022-00148-1</a>.
+</div>
+<div id="ref-cassidy2019" class="csl-entry" role="listitem">
+Cassidy, R. S., S. O hEireamhoin, and D. E. Beverland. 2019. <span>“Guidelines for the Follow-up of Total Hip Arthroplasty.”</span> <em>The Bone &amp; Joint Journal</em> 101-B (5): 536–39. <a href="https://doi.org/10.1302/0301-620x.101b5.bjj-2018-0853.r2">https://doi.org/10.1302/0301-620x.101b5.bjj-2018-0853.r2</a>.
+</div>
+<div id="ref-chahal2024" class="csl-entry" role="listitem">
+Chahal, Simrun, Rabail Siddiqui, Liam Puskas, Shalyn Littlefield, Lahama Naeem, Caroline Fanti, Claude Cullinan, Kurt Droll, David Puskas, and Travis E. Marion. 2024. <span>“Impact of a Remote Patient Monitoring Platform on Outcomes Following a Total Hip or Knee Arthroplasty.”</span> <em>Arthroplasty Today</em> 27 (June): 101415. <a href="https://doi.org/10.1016/j.artd.2024.101415">https://doi.org/10.1016/j.artd.2024.101415</a>.
+</div>
+<div id="ref-clement2021" class="csl-entry" role="listitem">
+Clement, Nick D., Chloe E. H. Scott, James R. D. Murray, Colin R. Howie, and David J. Deehan. 2021. <span>“The Number of Patients <span>“</span>Worse Than Death<span>”</span> While Waiting for a Hip or Knee Arthroplasty Has Nearly Doubled During the COVID-19 Pandemic.”</span> <em>The Bone &amp; Joint Journal</em> 103-B (4): 672–80. <a href="https://doi.org/10.1302/0301-620x.103b.bjj-2021-0104.r1">https://doi.org/10.1302/0301-620x.103b.bjj-2021-0104.r1</a>.
+</div>
 <div id="ref-elashmawy2021" class="csl-entry" role="listitem">
 El Ashmawy, Abd-Allah H., Kathleen Dowson, Ahmed El-Bakoury, Hazem A. H. Hosny, Rathan Yarlagadda, and Jonathan Keenan. 2021. <span>“Effectiveness, Patient Satisfaction, and Cost Reduction of Virtual Joint Replacement Clinic Follow-Up of Hip and Knee Arthroplasty.”</span> <em>The Journal of Arthroplasty</em> 36 (3): 816–822.e1. <a href="https://doi.org/10.1016/j.arth.2020.08.019">https://doi.org/10.1016/j.arth.2020.08.019</a>.
+</div>
+<div id="ref-fisher2020" class="csl-entry" role="listitem">
+Fisher, R, V Hamilton, S Reader, F Khatun, and M Porteous. 2020. <span>“Virtual Arthroplasty Follow-up: Five-Year Data from a District General Hospital.”</span> <em>The Annals of The Royal College of Surgeons of England</em> 102 (3): 220–24. <a href="https://doi.org/10.1308/rcsann.2019.0139">https://doi.org/10.1308/rcsann.2019.0139</a>.
+</div>
+<div id="ref-AIHW2025" class="csl-entry" role="listitem">
+Health, Australian Institute of, and Welfare. 14 May 2025. <span>“Elective Surgery.”</span> <a href="https://www.aihw.gov.au/hospitals/topics/elective-surgery" class="uri">https://www.aihw.gov.au/hospitals/topics/elective-surgery</a>.
+</div>
+<div id="ref-hickey2018" class="csl-entry" role="listitem">
+Hickey, Graeme L, Stuart W Grant, Joel Dunning, and Matthias Siepe. 2018. <span>“Statistical Primer: Sample Size and Power Calculations<span></span>why, When and How?<span></span>”</span> <em>European Journal of Cardio-Thoracic Surgery</em> 54 (1): 4–9. <a href="https://doi.org/10.1093/ejcts/ezy169">https://doi.org/10.1093/ejcts/ezy169</a>.
 </div>
 <div id="ref-joseph2021" class="csl-entry" role="listitem">
 Joseph, Vinay, Mathias T. Nagy, and James Fountain. 2021. <span>“Cost Analysis on Virtual Clinic Follow-up After Primary Joint Arthroplasty.”</span> <em>Journal of Clinical Orthopaedics and Trauma</em> 19 (August): 89–93. <a href="https://doi.org/10.1016/j.jcot.2021.05.010">https://doi.org/10.1016/j.jcot.2021.05.010</a>.
 </div>
+<div id="ref-kingsbury2016" class="csl-entry" role="listitem">
+Kingsbury, S. R., B. Dube, C. M. Thomas, P. G. Conaghan, and M. H. Stone. 2016. <span>“Is a Questionnaire and Radiograph-Based Follow-up Model for Patients with Primary Hip and Knee Arthroplasty a Viable Alternative to Traditional Regular Outpatient Follow-up Clinic?”</span> <em>The Bone &amp; Joint Journal</em> 98-B (2): 201–8. <a href="https://doi.org/10.1302/0301-620x.98b2.36424">https://doi.org/10.1302/0301-620x.98b2.36424</a>.
+</div>
+<div id="ref-kingsbury2023" class="csl-entry" role="listitem">
+Kingsbury, Sarah R., Lindsay K. K. Smith, Rafael Pinedo-Villanueva, Andrew Judge, Robert West, Judy M. Wright, Martin H. Stone, and Philip G. Conaghan. 2023. <span>“Mid- to Late-Term Follow-up of Primary Hip and Knee Arthroplasty: The UK SAFE Evidence-Based Recommendations.”</span> <em>Bone &amp; Joint Open</em> 4 (2): 72–78. <a href="https://doi.org/10.1302/2633-1462.42.bjo-2022-0149.r1">https://doi.org/10.1302/2633-1462.42.bjo-2022-0149.r1</a>.
+</div>
+<div id="ref-kjelle2024" class="csl-entry" role="listitem">
+Kjelle, Elin, Ingrid Øfsti Brandsæter, Eivind Richter Andersen, and Bjørn Morten Hofmann. 2024. <span>“Cost of Low-Value Imaging Worldwide: A Systematic Review.”</span> <em>Applied Health Economics and Health Policy</em> 22 (4): 485–501. <a href="https://doi.org/10.1007/s40258-024-00876-2">https://doi.org/10.1007/s40258-024-00876-2</a>.
+</div>
 <div id="ref-lim2022" class="csl-entry" role="listitem">
 Lim, Reuben, John Du, and Kosta Calligeros. 2022. <span>“Virtual Arthroplasty Clinic: A Single Centre Experience: Commentary on Progress, Cost Savings and Patient Retention.”</span> <em>ANZ Journal of Surgery</em> 92 (9): 2242–46. <a href="https://doi.org/10.1111/ans.17854">https://doi.org/10.1111/ans.17854</a>.
+</div>
+<div id="ref-loppini2022" class="csl-entry" role="listitem">
+Loppini, Mattia, Francesco Manlio Gambaro, Rob G H H Nelissen, and Guido Grappiolo. 2022. <span>“Large Variation in Timing of Follow-up Visits After Hip Replacement: A Review of the Literature.”</span> <em>EFORT Open Reviews</em> 7 (3): 200–205. <a href="https://doi.org/10.1530/eor-21-0016">https://doi.org/10.1530/eor-21-0016</a>.
 </div>
 <div id="ref-lovelock2018" class="csl-entry" role="listitem">
 Lovelock, Thomas, Michael O’Brien, Ian Young, and Nigel Broughton. 2018. <span>“Two and a Half Years on: Data and Experiences Establishing a <span>‘</span>Virtual Clinic<span>’</span> for Joint Replacement Follow Up.”</span> <em>ANZ Journal of Surgery</em> 88 (7-8): 707–12. <a href="https://doi.org/10.1111/ans.14752">https://doi.org/10.1111/ans.14752</a>.
 </div>
+<div id="ref-marsh2014" class="csl-entry" role="listitem">
+Marsh, Jacquelyn D., Dianne M. Bryant, Steven J. MacDonald, Douglas D. R. Naudie, Richard W. McCalden, James L. Howard, Robert B. Bourne, and James P. McAuley. 2014. <span>“Feasibility, Effectiveness and Costs Associated with a Web-Based Follow-Up Assessment Following Total Joint Arthroplasty.”</span> <em>The Journal of Arthroplasty</em> 29 (9): 1723–28. <a href="https://doi.org/10.1016/j.arth.2014.04.003">https://doi.org/10.1016/j.arth.2014.04.003</a>.
+</div>
 <div id="ref-McGill2025" class="csl-entry" role="listitem">
 McGill, Raquel, Corey Scholes, Stephen Torbey, and Lorenzo Calabro. 2025. <span>“Multidimensional Analysis of Preoperative Patient-Reported Outcomes Identifies Distinct Phenotypes in Total Knee Arthroplasty: Secondary Analysis of the SHARKS Registry in a Public Hospital Department.”</span> <em>The Journal of Knee Surgery</em> 38 (06): 300–308. <a href="https://doi.org/10.1055/s-0044-1801750">https://doi.org/10.1055/s-0044-1801750</a>.
+</div>
+<div id="ref-mehta2020" class="csl-entry" role="listitem">
+Mehta, Shivan J., Eric Hume, Andrea B. Troxel, Catherine Reitz, Laurie Norton, Hannah Lacko, Caitlin McDonald, et al. 2020. <span>“Effect of Remote Monitoring on Discharge to Home, Return to Activity, and Rehospitalization After Hip and Knee Arthroplasty.”</span> <em>JAMA Network Open</em> 3 (12): e2028328. <a href="https://doi.org/10.1001/jamanetworkopen.2020.28328">https://doi.org/10.1001/jamanetworkopen.2020.28328</a>.
+</div>
+<div id="ref-moldovan2025" class="csl-entry" role="listitem">
+Moldovan, Flaviu, and Liviu Moldovan. 2025. <span>“An Innovative Assessment Framework for Remote Care in Orthopedics.”</span> <em>Healthcare</em> 13 (7): 736. <a href="https://doi.org/10.3390/healthcare13070736">https://doi.org/10.3390/healthcare13070736</a>.
+</div>
+<div id="ref-parkes2019" class="csl-entry" role="listitem">
+Parkes, Rebekah J, Joanne Palmer, Jennifer Wingham, and Dan H Williams. 2019. <span>“Is Virtual Clinic Follow-up of Hip and Knee Joint Replacement Acceptable to Patients and Clinicians? A Sequential Mixed Methods Evaluation.”</span> <em>BMJ Open Quality</em> 8 (1): e000502. <a href="https://doi.org/10.1136/bmjoq-2018-000502">https://doi.org/10.1136/bmjoq-2018-000502</a>.
+</div>
+<div id="ref-piaggio2012" class="csl-entry" role="listitem">
+Piaggio, Gilda, Diana R. Elbourne, Stuart J. Pocock, Stephen J. W. Evans, Douglas G. Altman, and for the CONSORT Group. 2012. <span>“Reporting of Noninferiority and Equivalence Randomized Trials.”</span> <em>JAMA</em> 308 (24): 2594. <a href="https://doi.org/10.1001/jama.2012.87802">https://doi.org/10.1001/jama.2012.87802</a>.
 </div>
 <div id="ref-preston2023" class="csl-entry" role="listitem">
 Preston, NJ, GA McHugh, EMA Hensor, AJ Grainger, PJ O’Connor, PG Conaghan, MH Stone, and SR Kingsbury. 2023. <span>“Feasibility Testing of a Standardised Virtual Clinic for Follow-up of Patients After Hip and Knee Arthroplasty.”</span> <em>The Annals of The Royal College of Surgeons of England</em> 105 (3): 252–62. <a href="https://doi.org/10.1308/rcsann.2021.0356">https://doi.org/10.1308/rcsann.2021.0356</a>.
@@ -509,6 +670,24 @@ Preston, N., G. A. McHugh, E. M. A. Hensor, A. J. Grainger, P. J. O’Connor, P.
 </div>
 <div id="ref-richards2022" class="csl-entry" role="listitem">
 Richards, James D, Michael Stoddart, and Benjamin Bolland. 2022. <span>“Virtual Arthroplasty Follow-Up: Better for the Trust, Patients, and the Planet.”</span> <em>Cureus</em>, November. <a href="https://doi.org/10.7759/cureus.31978">https://doi.org/10.7759/cureus.31978</a>.
+</div>
+<div id="ref-schöner2024" class="csl-entry" role="listitem">
+Schöner, Lukas, David Kuklinski, Laura Wittich, Viktoria Steinbeck, Benedikt Langenberger, Thorben Breitkreuz, Felix Compes, et al. 2024. <span>“Cost-Effectiveness of a Patient-Reported Outcome-Based Remote Monitoring and Alert Intervention for Early Detection of Critical Recovery After Joint Replacement: A Randomised Controlled Trial.”</span> Edited by David Beard. <em>PLOS Medicine</em> 21 (10): e1004459. <a href="https://doi.org/10.1371/journal.pmed.1004459">https://doi.org/10.1371/journal.pmed.1004459</a>.
+</div>
+<div id="ref-scott2019" class="csl-entry" role="listitem">
+Scott, C. E H., D. J. MacDonald, and C. R. Howie. 2019. <span>“<span>‘</span>Worse Than Death<span>’</span> and Waiting for a Joint Arthroplasty.”</span> <em>The Bone &amp; Joint Journal</em> 101-B (8): 941–50. <a href="https://doi.org/10.1302/0301-620x.101b8.bjj-2019-0116.r1">https://doi.org/10.1302/0301-620x.101b8.bjj-2019-0116.r1</a>.
+</div>
+<div id="ref-smith2022" class="csl-entry" role="listitem">
+Smith, LK, E Turner, and E Dures. 2022. <span>“Patient Preferences for Long-Term Follow-up After Hip Replacement.”</span> <em>The Bulletin of the Royal College of Surgeons of England</em> 104 (1): 34–37. <a href="https://doi.org/10.1308/rcsbull.2022.11">https://doi.org/10.1308/rcsbull.2022.11</a>.
+</div>
+<div id="ref-thatcher2021" class="csl-entry" role="listitem">
+Thatcher, Mitchell D, Michael W Thatcher, Mckinley C Smith, Michelle McCarron, and Jeremy Reed. 2021. <span>“Opportunity Costs of Attending Surgical Clinic Appointments and Experiences with Telemedicine for Follow-up Care.”</span> <em>SAGE Open Medicine</em> 9 (January). <a href="https://doi.org/10.1177/20503121211045247">https://doi.org/10.1177/20503121211045247</a>.
+</div>
+<div id="ref-ulivi2021" class="csl-entry" role="listitem">
+Ulivi, Michele, Luca Orlandini, Valentina Meroni, Mario D’Errico, Arianna Fontana, Marco Viganò, Laura Mangiavini, et al. 2021. <span>“Remote Management of Patients After Total Joint Arthroplasty via a Web-Based Registry During the COVID-19 Pandemic.”</span> <em>Healthcare</em> 9 (10): 1296. <a href="https://doi.org/10.3390/healthcare9101296">https://doi.org/10.3390/healthcare9101296</a>.
+</div>
+<div id="ref-virani2022" class="csl-entry" role="listitem">
+Virani, Siddharth, Oubida Asaad, Omkaar Divekar, Crispin Southgate, and Baljinder S Dhinsa. 2022. <span>“The Impact of Harm Review Service on Patients Awaiting Elective Orthopaedic Foot and Ankle Surgery for More Than 52 Weeks.”</span> <em>Cureus</em>, March. <a href="https://doi.org/10.7759/cureus.23444">https://doi.org/10.7759/cureus.23444</a>.
 </div>
 </div>
 </section>

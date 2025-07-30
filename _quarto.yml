@@ -23,4 +23,5 @@ format:
     documentclass: scrreprt
 
 editor: visual
+echo: false
 

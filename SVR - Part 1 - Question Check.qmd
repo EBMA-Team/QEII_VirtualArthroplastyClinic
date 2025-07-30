@@ -8,7 +8,9 @@ Date: 3-Jul-2025
 
 # Executive Summary
 
-asdfasdf
+The proposed study question has been defined in the PICOS format and hypotheses developed to inform a future study design. A literature review has revealed a highly variable dataset of studies to inform the various elements of the study question and a proposed intervention has been included. The proposed intervention is based on the SHARKS registry currently operating in a fully digital mode within the department.
+
+The question check reveals some clear gaps in the literature in which the proposed question could fill and build on the purported benefits of a virtual clinic service for lower limb joint arthroplasty in the public health system . Some modifications to the virtual clinic service distinct from that reported in the relevant literature are proposed to i) improve patient compliance and ii) establish the service as a data-informed and patient led process.
 
 # Preparation
 
@@ -17,6 +19,7 @@ asdfasdf
 
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(
+  "epoxy",
   "tidyverse",
   "epoxy",
   "grateful",
@@ -32,51 +35,23 @@ pacman::p_load(
 
 # Background and Context
 
-There is an opportunity to increase patient access to care within the context of a public hospital department with respect to total joint arthroplasty by reducing low-value imaging [@kjelle2024] and removing routine in-person followup beyond early postoperative discharge for well-functioning patients.
+There is an opportunity to increase patient access to care within the context of a public hospital department with respect to total joint arthroplasty by reducing low-value imaging [@kjelle2024] and removing routine in-person followup beyond early postoperative discharge for well-functioning patients. The adverse effects of long-wait times have been well document for both in-person appointments [@virani2022] as well as surgery [@scott2019; @clement2021]. There remains a dire need to improve access to specialist services in Australia, particularly in joint replacement [@breadon2025]. Public hospitals continue to play an important role in providing access, even though the majority of elective surgeries are performed in the private system [@AIHW2025].
+
+Disinvestment in long-term followup of hip and knee arthroplasty remains a developing area of interest for the efficient provision of surgical services to populations in need. The current guidelines for followup in hip arthroplasty for example are largely developed by expert consensus, rather than primary evidence [@loppini2022]. More recent development of evidence-based recommendations affirm the safety of disinvestment in followups for routine hip and knee arthroplasty beyond 6 weeks [@kingsbury2023]. For example, [@cassidy2019] detected 80 revisions from 4802 total hip arthroplasties, with just two detected from routine followups, with neither from long-term followup appointments.
+
+Similarly, there is a large potential for cost-reduction in the provision of surgical services through the targeted disinvestment in low-value followup imaging [@kjelle2024]. For example, postoperative imaging immediately after total hip arthroplasty rarely reveals complications and offers minimal clinical utility [@brown2022]. These findings have also been observed in routine followup imaging after knee arthroplasty, with high associated costs [@birir2021]. In-person orthopaedic clinic appointments present considerable opportunity costs for patients with respect to travel, especially for regional and rural patients [@thatcher2021]. Initial investigation into patient preferences in the UK suggest that patients may prefer questionnaires as a screening tool for an opt-in service for followups after total hip arthroplasty in the medium to long term [@smith2022]. The cost utility of PROMs-based remote monitoring has been demonstrated in a large multicentre randomised trial in Germany [@schöner2024], in hip replacements, but not as clearly in knee replacements. Switching to a virtual model for this patient population also has benefits for the service , as well as the environmental impacts of reducing imaging, and reductions in patient travel to the physical clinic [@moldovan2025].
+
+In summary, remote monitoring of PROMs may offer an efficient option for reviewing high numbers of total joint replacements over time.
 
 ## Literature Review
 
-Search crossref for related articles
+A search was performed in Pubmed and Google Scholar using the following terms;
 
-```{r}
-#| execute: false
+::: {#search}
+("remote monitor\*" OR "virtual clinic") AND (arthroplasty OR "total joint")
+:::
 
-ReviewResults <- rcrossref::cr_works(
-  query ="virtual+arthoplasty+clinic",
-  .progress = "text")
-
-ReviewData <- ReviewResults$data
-
-```
-
-```{r}
-#| label: pubmed-query-1
-#| execute: false
-
-PubMedQuery <- "virtual+arthroplasty*[Title/Abstract] AND english[LA] AND Journal Article[PT] AND 2010:2025[DP]"
-
-PMResCount <- pmQueryTotalCount(query = PubMedQuery, api_key = NULL)
-
-PMResCount$total_count
-
-```
-
-```{r}
-#| execute: false
-
-PMResData <- pmApiRequest(query = PubMedQuery, limit = PMResCount$total_count, api_key = NULL)
-
-PMResDataRefined <- pmApi2df(PMResData)
-
-```
-
-What can we learn from relevant articles
-
-Virtual clinic reportedly saved the orthopaedic department at Frankston hospital \~\$250k and 300 outpatient clinic hours (2017-2018) by shifting 30% of their appointments for total knees to virtual followup [@lim2022].
-
-A cohort study from the UK [@joseph2021] enrolled a combined sample of total hips and knees (n = 148) into a virtual clinic (radiographs and PROMs) and reported an average saving of £10449 per consultant per year.
-
-Patient satisfaction after participating in a virtual clinic is also reasonably high [@elashmawy2021], however this has yet to be tested in a randomised trial.
+Articles were reviewed by hand and citations lists, as well as the *cited by* function of the reference management system (Paperpile, Paperpile LLC, USA) to retrieve articles of interest. The curated [citation list](https://docs.google.com/spreadsheets/d/1s8jsraWo8Gz1EzKLUCy75o-X7zRQ8mO1d9Gg4bf601s/edit?usp=sharing) was filtered and labelled with key benchmark papers identified.
 
 ## Related Work
 
@@ -84,92 +59,252 @@ The SHARKS governance report \[[link](https://coreyscholes-sharks-governance.sha
 
 Additional work from the SHARKS registry has identified PROMs-based phenotypes in total knee arthroplasty cases at baseline assessment [@McGill2025] that may also inform triaging of cases that could warrant different forms of follow up after hospital discharge.
 
-## Virtual Clinic Composition
-
-::: {#tbl-vc-composition}
-+------------------+--------------------------------------------------------------------+-----------------------------------------------------------------------+-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Citation         | Population - Setting                                               | Patient Invitation                                                    | Escalation                                      | Measurements                                                                                                                                             | Schedule                                                                                                                 | Notes                                                                                                                                                     |
-+==================+====================================================================+=======================================================================+=================================================+==========================================================================================================================================================+==========================================================================================================================+===========================================================================================================================================================+
-| [@preston2023]   | UK; 5 large centres                                                | Implemented as routine care at each site for pilot period             | Clinical decision algorithm (Figure 1)          | Standardised approach [@preston2019]                                                                                                                     | 6 week followup with clinician option to schedule further appointments                                                   | "The VC required adaptation of administration pathways, creation of new clinic codes and changes to Patient Administration System pathways."              |
-|                  |                                                                    |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-|                  | mix of regional teaching hospitals and nonacute outpatient clinics |                                                                       |                                                 | PROMs and radiograph report                                                                                                                              |                                                                                                                          |                                                                                                                                                           |
-|                  |                                                                    |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-|                  | 19-Jun-2018 to 11-Dec-2018                                         |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-|                  |                                                                    |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-|                  | N = 561                                                            |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-+------------------+--------------------------------------------------------------------+-----------------------------------------------------------------------+-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| [@lovelock2018]  | Department database (hip and knee) (Frankston Hospital, Vic)       | Contacted via post - with cover letter, radiograph referral and PROMs | Review by consultant surgeon                    | PROMs and radiograph (no report)                                                                                                                         | Any patient due for followup at any one of the 1, 5 or 7 followup timepoints                                             | Surgeons undertook...reviews in spare clinical time, ...between patients in the outpatient clinic, and...between cases in theatre                         |
-|                  |                                                                    |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-|                  | N = 2076 due for followup Jul 2014 - Dec 2016                      |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-+------------------+--------------------------------------------------------------------+-----------------------------------------------------------------------+-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| [@elashmawy2021] | University Hospitals Plymouth NHS Trust                            | VJRC invite pack in the post                                          | review by Arthroplasty Physiotherapy Specialist | VJRC invite pack cover letter, return envelope, Patient Reported Outcome Measures (PROMs) booklet and detailed info to attend a local radiology facility | Referred from 6 week appointment for VC at 1 year appointment; Patients due for 7 year+ appointments were invited for VC | A reminder call or letter was sent to patients if the completed paperwork and/or 76 plain radiographs were not received after 4 weeks of VJRC invitation. |
-|                  |                                                                    |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-|                  | hip and knee                                                       |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-|                  |                                                                    |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-|                  | N = 1749 invited                                                   |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-+------------------+--------------------------------------------------------------------+-----------------------------------------------------------------------+-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| [@richards2022]  | Musgrove Park Hospital (MPH), Taunton UK                           | VJRC invite pack in the post                                          | Oxford Hip Score \< 33 or unacceptable xray     | Cover letter - PROMs booklet; instructions for radiography                                                                                               | Referred from 6 week appointment for VC at 1 year appointment; Patients due for 7 year+ appointments were invited for VC |                                                                                                                                                           |
-|                  |                                                                    |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-|                  | hip only                                                           |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-|                  |                                                                    |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-|                  | Jan 17 - Dec 2018                                                  |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-|                  |                                                                    |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-|                  | N = 240                                                            |                                                                       |                                                 |                                                                                                                                                          |                                                                                                                          |                                                                                                                                                           |
-+------------------+--------------------------------------------------------------------+-----------------------------------------------------------------------+-------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-Summary of virtual clinic composition
-:::
+Planning currently underway for an analysis of the tibiofemoral instability cohort with respect to case-mixture adjustment, will also have implications for the proposed activity. By constructing a case-mixture adjustment model for postoperative scores in the arthroplasty cohorts of SHARKS, an individualised expectation for PROMs scores can be generated and used to benchmark patient responses at the selected followup timepoints.
 
 # Study Question
 
-asdfasdf
+To clarify the study aims and purpose, the following question(s) have been proposed in the PICOS format [@amir-behghadami2020] to facilitate clear discussion over the key parameters that will inform conduct of future research.
 
 ::: {#tbl-question}
-+--------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+---------------------+
-| Component    | Question 1 - Compliance/Engagement                                                                                                   | Question 2 - Safety and Efficacy | Comments            |
-+==============+======================================================================================================================================+==================================+=====================+
-| Population   | In patients electing to undergo total knee arthroplasty for the treatment of end-stage arthritis within a public hospital department |                                  |                     |
-+--------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+---------------------+
-| Intervention |                                                                                                                                      |                                  |                     |
-+--------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+---------------------+
-| Comparator   |                                                                                                                                      |                                  |                     |
-+--------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+---------------------+
-| Outcomes     |                                                                                                                                      |                                  |                     |
-+--------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+---------------------+
-| Study Design |                                                                                                                                      |                                  |                     |
-+--------------+--------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+---------------------+
++------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Component        |                                                                                                                                                                                             | Comments                                                                                                           |
++==================+=============================================================================================================================================================================================+====================================================================================================================+
+| **Population**   | In patients electing to undergo primary joint arthroplasty within a public hospital department and deemed suitable for discharge to a *virtual clinic* at the 6-week in-person consultation | The distinction between selective and routine discharge may need to be further refined in the protocol             |
++------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| **Intervention** | requested to provide feedback via links (communicated via sms) to standardised patient-reported outcomes and free-text commentary regarding change in status                                | Further discussion may be required on the merits of bidirectional vs unidirectional messaging                      |
++------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| **Comparator**   | compared to standard of care with repeated in-person followup appointments in hospital clinic and radiographs                                                                               | How the comparator group is defined with respect to routine SHARKS contact may need further refinement             |
++------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| **Outcomes**     | [Q1 - Compliance \| Engagement]{.underline}                                                                                                                                                 | See notes below hypotheses                                                                                         |
+|                  |                                                                                                                                                                                             |                                                                                                                    |
+|                  | Is there a clinically useful reduction in loss - to - followup compared to did-not-attend incidence for in-person appointments?                                                             |                                                                                                                    |
+|                  |                                                                                                                                                                                             |                                                                                                                    |
+|                  | [Q2 - Efficacy and Safety]{.underline}                                                                                                                                                      |                                                                                                                    |
+|                  |                                                                                                                                                                                             |                                                                                                                    |
+|                  | Is the *virtual clinic* non-inferior with respect to emergency department representations and/or hospital readmissions?                                                                     |                                                                                                                    |
++------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| **Study Design** | Registry-embedded service evaluation                                                                                                                                                        | Consideration of data linkage for safety and efficacy will be required to detect accurate outcomes for both groups |
++------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 Summary of question in PICOS format
 :::
 
+## Hypotheses
+
+Given the questions summarised in @tbl-question, the following hypotheses are drafted for planning purposes.
+
+::: {#hypotheses1}
+### Q1 Compliance/Engagement
+
+**Statistical Hypotheses:**
+
+-   **Null Hypothesis (H₀):** There is no difference in loss-to-follow-up rates between SMS-based virtual clinic follow-up and standard in-person follow-up appointments (p₁ = p₂, where p₁ = virtual clinic loss-to-follow-up rate, p₂ = standard care did-not-attend rate)
+
+-   **Alternative Hypothesis (H₁):** There is a difference in loss-to-follow-up rates between SMS-based virtual clinic follow-up and standard in-person follow-up appointments (p₁ ≠ p₂)
+
+**Clinical Hypotheses:**
+
+-   **Null Hypothesis:** SMS-based virtual clinic follow-up does not provide a clinically meaningful reduction in loss-to-follow-up compared to standard in-person appointments
+
+-   **Alternative Hypothesis:** SMS-based virtual clinic follow-up provides a clinically meaningful reduction in loss-to-follow-up compared to standard in-person appointments
+:::
+
+::: {#callout1 .callout-note}
+To complete planning, the statement will need to define what constitutes a "clinically useful reduction" [@hickey2018] - this could be expressed as either an absolute difference (e.g., 10% reduction) or relative difference (e.g., 25% relative reduction).
+:::
+
+::: {#hypotheses2}
+### Q2 Efficacy and Safety (Non-inferiority)
+
+**Statistical Hypotheses:**
+
+-   **Null Hypothesis (H₀):** The virtual clinic is inferior to standard care with respect to emergency department representations and/or hospital readmissions (p₁ - p₂ \> δ, where δ is the non-inferiority margin)
+
+-   **Alternative Hypothesis (H₁):** The virtual clinic is non-inferior to standard care with respect to emergency department representations and/or hospital readmissions (p₁ - p₂ ≤ δ)
+
+**Clinical Hypotheses:**
+
+-   **Null Hypothesis:** SMS-based virtual clinic follow-up results in clinically unacceptable higher rates of emergency department representations and/or hospital readmissions compared to standard in-person follow-up
+
+-   **Alternative Hypothesis:** SMS-based virtual clinic follow-up does not result in clinically unacceptable higher rates of emergency department representations and/or hospital readmissions compared to standard in-person follow-up (i.e., is non-inferior)
+:::
+
+::: {#callout2 .callout-note}
+The *non-inferiority margin* (δ) [@piaggio2012] will need to be established a priori based on clinical judgment and previous literature. This margin represents the maximum acceptable increase in adverse outcomes that would still consider the virtual clinic approach acceptable given its potential benefits (convenience, cost-effectiveness, resource utilization).
+:::
+
 # Population
+
+The population of interest in the related literature has been overwhelmingly primary lower limb joint arthroplasty, although there have been exceptions where the selection criteria was not limited to the arthroplasty type (e.g. "all arthroplasty patients with an upcoming appointment"). There has been a body of work on virtual clinics in mostly public or teaching hospitals within the UK [@preston2023; @kingsbury2016; @richards2022; @fisher2020], with some work in Europe [@schöner2024; @ulivi2021], Canada [@marsh2014; @chahal2024], the United States [@mehta2020] and Australia (Victoria) [@lovelock2018; @lim2022]. Overall, despite the impacts of the covid19 pandemic on service delivery globally, there has been limited published efforts reporting the implementation of virtual arthroplasty clinics in Australia.
 
 ## Discharge Criteria
 
+The criteria for discharging patients to a virtual clinic in the literature have been sparsely described, or have not fit the implementation or research methodology of the published article. One study [@mehta2020], targeted patients with a Risk Assessment and Prediction Tool (RAPT) score that placed them in the at-risk category for facility discharge, before randomising them to a sophisticated patient engagement platform or to usual care. Others have relied on a clinician decision at a face-to-face consultation early in the followup process to determine if the patient is "low-risk" or appropriate for virtual clinic followup [@batten2017], while more established clinic models have transitioned to offering virtual follow up routinely [@fisher2020]. The AOA guidelines for followup [@broughton2019] may provide a starting point for determining patients "at-risk", however the risk profile of each of these points in the context of a virtual clinic could be debated;
+
+-   Young patients (less than 60yo)
+
+-   Active patients (patients engaging in sport, manual work etc)
+
+-   Heavy patients (more than 100kg)
+
+-   Metal on metal articulations
+
+-   Modular neck devices
+
+-   New implant designs yet to establish a proven track record
+
+-   Revision implants and those with lysis or previous infection
+
+-   Implants known to be associated with higher incidence of problems
+
 ## Other Inclusion Criteria
 
-Are appropriate for followup by the SHARKS registry
+In the context of the SHARKS registry specifically, with particular attention to the communication modality and appropriateness for engaging with the PROMs pack at each scheduled timepoint and understanding the adjunct pathway for out-of-schedule contact, there are additional criteria for patient selection that may need to be considered. Namely, these relate to the patient's appropriate for followup with the registry;
 
--   Are contactable by phone
+-   Are contactable by phone (have a phone number on record)
+
+```{r}
+#| echo: false
+
+
+NoNumber = binom.test(
+  x = 14,
+  n = 1246,
+  conf.level = 0.95
+)
+```
+
+```{epoxy}
+
+The incidence of cases without a phone number available for contacting is {round(NoNumber$estimate*100,2)}% (N = 1246 appointments)  with a confidence interval of {round(NoNumber$conf.int[1]*100,2)} to {round(NoNumber$conf.int[2]*100,2)}% 
+
+```
 
 -   Do not present with any physical or mental impairments to responding to online questionnaires communicated by sms
+-   Possess sufficient English skills to navigate the PROMs pack or support of family \| friends to provide translation
 
 # Intervention
 
-Discharge from department care at 6 weeks
+The specific composition of the intervention in the study question will likely take some further refinement. The literature varies widely within the literature for the methodology of the virtual clinic service, as well as its evaluation.
 
-Followup with SHARKS scheduled timepoints
+## Virtual Clinic Composition
+
+A summary of related studies has been tabled below. The setting, sample size, components of the intervention and a summary of results is available for review.
+
+::: {#tbl-vc-composition .iframe-container}
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTUDMgG4xsnKrKk2YuWwrpYvQQw2pqWeoE6OTRv4pR1pEEW_xF-xCHYBq_Li5CzKU-rMCye8eHvlFTR/pubhtml?gid=1947770404&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="640" frameborder="0">
+
+</iframe>
+
+Summary of virtual clinic composition
+:::
+
+The components and definition of a virtual clinic intervention varies substantially between studies and clinical contexts as shown in @tbl-vc-composition. The capacity of the health system provider to incorporate specialised infrastructure to conduct enrolment, patient messaging and clinician alerts broadly determines what methodology is used for both the intervention and the evaluation of the service.
+
+Although web-based followup has been published for some time [@marsh2014], it has not been the most popular approach for virtual clinic followup, although there has been one report of a platform that has been in use for some time in the UK [@parkes2019]. A combination of patient-reported outcomes - either specially designed for the purpose [@preston2023; @preston2019] or popular standardised measures (e.g. Oxford, EQ5D) [@richards2022; @elashmawy2021] collected on paper and returned via mail - combined with a radiograph [@preston2023; @richards2022; @joseph2021] captured at a convenient location appears to be the mainstay approach. Others have used very detailed patient engagement programs with gamification and bidirectional messaging [@mehta2020], or a mobile-based application [@chahal2024]. The key distinction between the literature and the proposed approach is that the use of web-based patient registries with uni-directional messaging to support patients after *discharge* from in-person care is relatively rare, with just one paper [@ulivi2021] using this method during the covid pandemic, and even then it was largely facilitated with PROMs collection by phone.
+
+## Proposed Intervention (Draft)
+
+The proposed intervention contains two key components. The first is embedded within the SHARKS registry and comprises the routine PROMs followups designed into the *KneeArthritis* and *HipArthroplasty* cohorts. The key difference being the lack of 6month followup for the HA cases.
+
+::: {#fig-intervention-propose}
+`<iframe frameborder="0" style="width:100%;height:633px;" src="https://viewer.diagrams.net/?tags=%7B%7D&amp;lightbox=1&amp;highlight=0000ff&amp;edit=_blank&amp;layers=1&amp;nav=1&amp;title=SVR%20Virtual%20Arthroplasty%20Clinic%20Intervention.drawio&amp;dark=0#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1lsdQ6MDXnZg6qzFVyE5s_5nZ9bBz_uDj%26export%3Ddownload"`{=html}
+
+</iframe>
+
+Proposed virtual clinic workflow (intervention)
+:::
+
+### Discharge from department care at 6 weeks
+
+There would need to be some communication between the clinic staff and the VC system that a patient had been discharged into virtual clinic at the 6 week appointment. Routine discharge to virtual clinic (unless otherwise directed) would be a much easier system to administer within the registry platform.
+
+### Followup schedule
+
+::: {#fig-followup}
+![](SHARKS%20KA%20Followup.png)
+
+Followup schedule for SHARKS cohorts - KneeArthritis and HipArthroplasty
+:::
+
+The current followup schedule for SHARKS is illustrated in @fig-followup, with the pathology-specific score (OHS or OKS) on the bottom row. Considering the more clinical nature of the proposed virtual service, a 6month timepoint may be appropriate to add and discharge criteria for the virtual clinic added to allow patients the ability to opt-out of futher followups once they achieve an acceptable score on the PROMs pack. This may help to encourage patient compliance with the service and further refine the concept of patient-led care in this context. Contingencies for escalation if patients do not engage at least once may need to be considered as per [@batten2017].
+
+### Adjunct Pathways
+
+The adjunct pathway (left side of @fig-intervention-propose) is a persistent portal for a patient enrolled in the virtual clinic to provide feedback or report a change in circumstance that may fall outside of the scheduled followup touch points incorporated into the registry system. A large study of total hip arthroplasties [@cassidy2019], detected 80 revision cases, in a series of 4802 procedures and 45% of these were revised after self-referral back to the treating surgeon, with nearly all of the remainder re-presenting after referral from other care providers. They concluded that well-performing implants can be discharged from their first postoperative review as long as there is a robust system of self-referral in place. The presence of an pathway for communication from patient to health service varies depending on which virtual clinic model is reviewed in the literature.
 
 # Comparator
 
+Of those studies summarised in @tbl-vc-composition, the majority compared the virtual clinic intervention to standard of care, usually with in-person appointments and followup radiographs and set timepoints. In the context of the proposed study question, a number of options for the control group may be considered
+
+-   Historical controls - work involving the SHARKS registry data examining the early clinical outcomes of the ROSA robotic-assisted knee arthroplasties performed within the department could provide a control group that is relatively recent with respect to emergency department presentation and other complications identified from iemr review.
+
+-   Concurrent controls - depending on sample size requirements, an intervention subgroup of consultants within the department could contribute patients to the virtual clinic and these could be compared to patients engaging during the same time period with non-participating surgeons.
+
+::: {#fig-boa-guidelines}
+![](BOA%20followup%202019.png)
+
+Summary of British Orthopaedic Association arthroplasty follow up guidelines (Reproduced from
+:::
+
+The previous BOA guidelines @fig-boa-guidelines have formed the standard of care for many papers included in @tbl-vc-composition. However, the AOA guidelines from 2019 differ in some respects and historically at QEII most patients are discharged after the 12month followup appointment.
+
+A key consideration will be the decision to maintain usual SHARKS contact with patients not enrolled in the virtual clinic to mitigate potential crossover effects on in-person clinic attendance or confusion between patients and clinicians about the status of the patient with respect to the virtual clinic, particularly after the service has been explained to them.
+
 # Outcomes
+
+## Patient Engagement
+
+One of the key challenges of maintaining a viable virtual service in following arthroplasty patients after surgery is their willingness to engage with the system. The relevant literature reports variable results in this regard.
+
+An Australian implementation of a virtual clinic [@lovelock2018] reported 36% compliance (see @tbl-vc-composition) in a pool of 1405 contactable patients for arthroplasty followup over a 2-year period. These results should be interpreted in the context of the virtual clinic service which was relatively rigid in terms of the schedule and involved both paper-based PROMs completion and a radiograph. Modifying the clinic (intervention) to be more patient led and less onerous at each "appointment", may increase patient engagement rates. In contrast, a similar virtual service implemented in the UK [@batten2017] reported a much higher compliance rate (89.4%) from a sample of 151 patients eligible (@tbl-vc-composition). The main difference between the two studies was that Batten et al implemented a clear escalation pathway for patients that had not replied and were followed up by phone by a dedicated arthroplasty nurse within the department.
+
+## Safety and Efficacy
+
+There is a lack of standardisation across interventions and studies with respect to quantification of sensitivity and specificity of virtual clinic interventions and the ability to detect deterioration in clinical status in a timely manner. The studies summarised in @tbl-vc-composition do offer some clues.
+
+A UK study with paper PROMs and radiographs in 5380 patients (hip or knee arthroplasty) [@fisher2020] reported no documented admissions resulting from a missed complication at virtual review. The Australian implementation reported one revision case that appeared in between virtual appointments [@lovelock2018]. A followup study [@lim2022] reported an estimated saving of \$250K AUD and 300 review hours from the outpatient clinic by switching 30% of appointments to the virtual clinic over the review period, while others have reported cost savings and reduced travel requirements for patients randomised to a web-based virtual clinic [@marsh2014]. A randomised multicentre study from Germany [@schöner2024] reported improved patient-reported outcomes in patients randomised to virtual clinic compared to usual care (@tbl-vc-composition).
+
+To-date, there has been no detailed assessment of adverse events or readmissions using a virtual clinic model as proposed, with some positive indications of the safety and efficacy of virtual clinics reported in the literature.
+
+## Unintended Harms
+
+The risk of publication bias in this highly selective literature base cannot be fully ruled out. The risks associated with virtual clinics in other medical contexts have been documented, however there is a lack of balance in the available literature, suggesting that some degree of publication bias (where negative or unsatisfactory results are suppressed from publication, usually by self-censorship) may be present.
+
+There has been some discussion that virtual clinics may not be appropriate for new orthopaedic patients, with one observational study [@shammout2022] detecting a delay in patients' clinical progression from virtual clinic followup, where a significantly higher number of cases were brought back in for face to face followup, compared to initial face-to-face consultations. A review of virtual clinics in the UK public service identified contacting patients as a key challenge [@smith2020], while others note issues with patient access to technologies required, as well as risks to privacy and confidentiality [@windsor2021].
+
+Overally, the unintended harms associated with the proposed service model can be summarised as;
+
+-   Denying access to patients most in need of followup
+
+-   Increasing the risk of unintended exposure of patient clinical information (at rest and in transit)
+
+-   Delays to definitive care progression where a patient provides equivocal or contradictory responses
+
+-   Is insufficiently sensitive to changes in clinical status associated with heightened risk of clinical failure or need for revision
 
 # Study Design and Quality
 
-Could nearly be considered randomised if allocation to consultant team is randomly assigned.
-
-<!--# Need to investigate how consultant team allocation is conducted within hospital system -->
+The study quality and methodology for evaluations vary widely within the relevant literature. While some randomised trials [@schöner2024; @marsh2014] have been implemented, the majority of publications report audits or retrospective reviews with or without a control group (@tbl-vc-composition). Of particular interest in this specific context may be the implementation of a sequential mixed methods approach, that combines a trial approach with concurrent or historial controls with qualitative assessment of key stakeholders perceptions and views of the proposed service [@parkes2019].
 
 # Question-Gap Alignment
 
-# References
+::: {#tbl-qg-align}
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| Component     | Gap                                                                                                                                                                           | Summary                                                                                                                            |
++===============+===============================================================================================================================================================================+====================================================================================================================================+
+| Population    | There is very little gap in the literature with respect to primary lower limb total joint replacement                                                                         | The proposed question expands the knowledge to patients treated in the Queensland public system                                    |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| Intervention  | There is little information regarding the use of web-based registries to replace in-person postoperative followup                                                             | Web-based registries have not been implemented in Australia for the proposed study                                                 |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| Comparator    | Comparing a web (sms) based system to usual standard of care has not been formally assessed in the literature                                                                 | The routine data collection provided by the SHARKS registry opens new avenues of questioning with respect to recovery trajectories |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| Outcomes      | Patient engagement has been assessed in a limited number of trials. The impact of a patient-led discharge process has not been investigated.                                  | How safety and efficacy are defined in this context needs further refinement                                                       |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+| Study Design  | Embedding a virtual clinic service within an active registry has been conducted in various forms in the literature, but not one that is fully electronic and wholly sms-based | A mixed-methods approach may provide the most efficient methodology to establish sufficient information for service design         |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+
+Summary of alignment between proposed question and literature gap
+:::
+
+The summary illustrated in @tbl-qg-align illustrates a key gap in the literature with respect to the proposed intervention and perceived benefits.
