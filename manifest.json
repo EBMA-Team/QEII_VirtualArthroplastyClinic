@@ -3909,19 +3909,25 @@
   },
   "files": {
     ".RData": {
-      "checksum": "c59a21f329d82b155883aa79fb0b6c66"
+      "checksum": "afdcde08a10534560c1f4c6b1255b75b"
+    },
+    "_book/BOA followup 2019.png": {
+      "checksum": "863d1abd4b04d152ac26696178879e3a"
     },
     "_book/index.html": {
       "checksum": "8624593d1a9ee78ffc27810cf5fc1487"
     },
     "_book/intro.html": {
-      "checksum": "4491cfc1017f6dd5b426b2409f339b28"
+      "checksum": "af8a3f45c448fdf0851029f178d72e54"
     },
     "_book/references.html": {
-      "checksum": "690bc489570afea1d13e75c713956711"
+      "checksum": "938800b94fdf5945bdfb67d8609e0f5e"
     },
     "_book/search.json": {
-      "checksum": "5df3ada6324521a3f917c0270b79b585"
+      "checksum": "d092cbc95a18df72584ba3119adea7b5"
+    },
+    "_book/SHARKS KA Followup.png": {
+      "checksum": "84dacdbf5850eb225e0eafde6473b802"
     },
     "_book/site_libs/bootstrap/bootstrap-icons.css": {
       "checksum": "2318f137d201fbf51601fa0faba6bef7"
@@ -3975,7 +3981,7 @@
       "checksum": "7b9cddb86292df7fa45441e52452c974"
     },
     "_book/SVR - Part 1 - Question Check.html": {
-      "checksum": "b521d2b32b4abc9ef04347fa30859247"
+      "checksum": "63b2ad1bb5dbcddfffe96385e30b7c1e"
     },
     "_book/SVR - Part 2 - Viability.html": {
       "checksum": "071e67afe58e48e2ebca6ef0461cdf4a"
@@ -3984,7 +3990,10 @@
       "checksum": "5a14c302bd58304a2c6f6181e8745817"
     },
     "_quarto.yml": {
-      "checksum": "e1a7c7cafa18e5d6a53552b9ba943269"
+      "checksum": "a76c2f3ed3401b47a0bf41286910e0cc"
+    },
+    "BOA followup 2019.png": {
+      "checksum": "863d1abd4b04d152ac26696178879e3a"
     },
     "cover.png": {
       "checksum": "308012df3fa962ae61c7114806331a72"
@@ -3993,7 +4002,7 @@
       "checksum": "f89d2cae73031aafc1d0dc4ae48f295e"
     },
     "intro.qmd": {
-      "checksum": "e514ad799b2b10ced9d02b36ca26bbd2"
+      "checksum": "79987efdb23f497d3c14a8195a169e42"
     },
     "LICENSE": {
       "checksum": "3a3f3cea56febea828890847e3cb11d7"
@@ -4002,16 +4011,19 @@
       "checksum": "2d725168ffc90a7f3b93cd414a46ec44"
     },
     "references.bib": {
-      "checksum": "9234bbd39c891e280902dd4325418277"
+      "checksum": "87488063cbb6b9fd9cc47e70ef4c91d9"
     },
     "references.qmd": {
       "checksum": "20d3273ad995f344fa1d144ca5d3ecf1"
+    },
+    "SHARKS KA Followup.png": {
+      "checksum": "84dacdbf5850eb225e0eafde6473b802"
     },
     "summary.qmd": {
       "checksum": "6b21a250588dde6f79d83bc9a62d55df"
     },
     "SVR - Part 1 - Question Check.qmd": {
-      "checksum": "0d315ea7626f4f90bfc3f32e8f3d2dfc"
+      "checksum": "1bc514f3732a15400bd157020c090cd2"
     },
     "SVR - Part 2 - Viability.qmd": {
       "checksum": "49995b55eada2b9488409cfaef3b65cc"
